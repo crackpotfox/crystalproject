@@ -4,9 +4,9 @@ KantoWaterWildMons:
 
 	def_water_wildmons TOHJO_FALLS
 	db 4 percent ; encounter rate
-	db 20, GOLDEEN
-	db 20, SLOWPOKE
-	db 20, SEAKING
+	db 34, GOLDEEN
+	db 36, SLOWPOKE
+	db 34, SEAKING
 	end_water_wildmons
 
 	def_water_wildmons VERMILION_PORT
@@ -60,23 +60,23 @@ KantoWaterWildMons:
 
 	def_water_wildmons ROUTE_19
 	db 6 percent ; encounter rate
-	db 35, TENTACOOL
-	db 30, TENTACOOL
-	db 35, TENTACRUEL
+	db 54, QWILFISH
+	db 52, TENTACOOL
+	db 55, TENTACRUEL
 	end_water_wildmons
 
 	def_water_wildmons ROUTE_20
 	db 6 percent ; encounter rate
-	db 35, TENTACOOL
-	db 30, TENTACOOL
-	db 35, TENTACRUEL
+	db 52, TENTACOOL
+	db 53, TENTACOOL
+	db 55, TENTACRUEL
 	end_water_wildmons
 
 	def_water_wildmons ROUTE_21
 	db 6 percent ; encounter rate
-	db 35, TENTACOOL
-	db 30, TENTACOOL
-	db 35, TENTACRUEL
+	db 54, TENTACOOL
+	db 57, TENTACOOL
+	db 58, MANTINE
 	end_water_wildmons
 
 	def_water_wildmons ROUTE_22
@@ -116,16 +116,16 @@ KantoWaterWildMons:
 
 	def_water_wildmons ROUTE_28
 	db 2 percent ; encounter rate
-	db 40, POLIWAG
-	db 35, POLIWAG
-	db 40, POLIWHIRL
+	db 68, QUAGSIRE
+	db 68, AZUMARILL
+	db 70, KINGLER
 	end_water_wildmons
 
 	def_water_wildmons PALLET_TOWN
 	db 6 percent ; encounter rate
-	db 35, TENTACOOL
-	db 30, TENTACOOL
-	db 35, TENTACRUEL
+	db 54, TENTACOOL
+	db 57, TENTACOOL
+	db 58, TENTACRUEL
 	end_water_wildmons
 
 	def_water_wildmons VIRIDIAN_CITY
@@ -144,16 +144,16 @@ KantoWaterWildMons:
 
 	def_water_wildmons VERMILION_CITY
 	db 6 percent ; encounter rate
-	db 35, TENTACOOL
-	db 30, TENTACOOL
-	db 35, TENTACRUEL
+	db 50, CORSOLA
+	db 50, LANTURN
+	db 50, TENTACRUEL
 	end_water_wildmons
 
 	def_water_wildmons CELADON_CITY
 	db 2 percent ; encounter rate
-	db 20, GRIMER
-	db 15, GRIMER
-	db 15, MUK
+	db 50, GRIMER
+	db 51, GRIMER
+	db 54, MUK
 	end_water_wildmons
 
 	def_water_wildmons FUCHSIA_CITY
@@ -165,9 +165,9 @@ KantoWaterWildMons:
 
 	def_water_wildmons CINNABAR_ISLAND
 	db 6 percent ; encounter rate
-	db 35, TENTACOOL
-	db 30, TENTACOOL
-	db 35, TENTACRUEL
+	db 56, CORSOLA
+	db 55, CORSOLA
+	db 56, TENTACRUEL
 	end_water_wildmons
 
 	db -1 ; end
