@@ -652,7 +652,7 @@ JohtoGrassWildMons:
 	db 31, GRAVELER
 	db 32, MACHOKE
 	db 32, HITMONLEE
-	db 32, HUTMONCHAN
+	db 32, HITMONCHAN
 	db 28, DUNSPARCE
 	db 30, SANDSLASH
 	db 30, AZUMARILL
@@ -660,7 +660,7 @@ JohtoGrassWildMons:
 	db 31, GRAVELER
 	db 32, MACHOKE
 	db 32, HITMONLEE
-	db 32, HUTMONCHAN
+	db 32, HITMONCHAN
 	db 28, DUNSPARCE
 	db 30, SANDSLASH
 	db 30, AZUMARILL
@@ -668,7 +668,7 @@ JohtoGrassWildMons:
 	db 31, GRAVELER
 	db 32, MACHOKE
 	db 32, HITMONLEE
-	db 32, HUTMONCHAN
+	db 32, HITMONCHAN
 	db 28, DUNSPARCE
 	db 30, SANDSLASH
 	db 30, AZUMARILL
@@ -1506,7 +1506,7 @@ JohtoGrassWildMons:
 	db 23, MILTANK
 	; nite
 	db 21, MEOWTH
-	db 21, FLAAFY
+	db 21, FLAAFFY
 	db 22, MAGNEMITE
 	db 22, NOCTOWL
 	db 23, MEOWTH
@@ -1593,7 +1593,7 @@ JohtoGrassWildMons:
 	db 28, NOCTOWL
 	db 26, GIRAFARIG
 	db 28, VENONAT
-	db 27, RATCATE
+	db 27, RATICATE
 	db 27, VENOMOTH
 	db 28, VENOMOTH
 	end_grass_wildmons
@@ -1634,7 +1634,7 @@ JohtoGrassWildMons:
 	db 32, GLIGAR
 	db 33, DONPHAN
 	db 31, PHANPY
-	db 33, PRIMAPE
+	db 33, PRIMEAPE
 	db 34, SKARMORY
 	; day
 	db 33, RHYHORN
@@ -1642,7 +1642,7 @@ JohtoGrassWildMons:
 	db 32, GLIGAR
 	db 33, DONPHAN
 	db 31, PHANPY
-	db 33, PRIMAPE
+	db 33, PRIMEAPE
 	db 34, SKARMORY
 	; nite
 	db 33, RHYHORN
