@@ -1,6 +1,6 @@
 	db ARIADOS ; 168
 
-	db  70,  90,  70,  40,  60,  60
+	db  85, 100,  80,  40,  95,  75
 	;   hp  atk  def  spd  sat  sdf
 
 	db BUG, POISON ; type
