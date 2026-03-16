@@ -1,6 +1,6 @@
 	db SQUIRTLE ; 007
 
-	db  44,  48,  65,  43,  50,  64
+	db  50,  46,  65,  43,  50,  65
 	;   hp  atk  def  spd  sat  sdf
 
 	db WATER, WATER ; type

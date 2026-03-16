@@ -1,6 +1,6 @@
 	db CLEFABLE ; 036
 
-	db  95,  70,  73,  60,  85,  90
+	db 105,  85,  85,  60,  90,  90
 	;   hp  atk  def  spd  sat  sdf
 
 	db NORMAL, NORMAL ; type
