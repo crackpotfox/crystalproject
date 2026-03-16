@@ -1,9 +1,9 @@
 	db PORYGON2 ; 233
 
-	db  85,  80,  90,  60, 105,  95
+	db 100, 105, 100,  60, 105, 100
 	;   hp  atk  def  spd  sat  sdf
 
-	db NORMAL, NORMAL ; type
+	db NORMAL, ELECTRIC ; type
 	db 45 ; catch rate
 	db 180 ; base exp
 	db NO_ITEM, NO_ITEM ; items
