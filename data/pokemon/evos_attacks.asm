@@ -2694,7 +2694,7 @@ GirafarigEvosAttacks:
 	db 13, BITE
 	db 20, AGILITY
 	db 26, PSYBEAM
-	db 33, THUNDERWAVE
+	db 33, THUNDER_WAVE
 	db 38, LIGHT_SCREEN
 	db 44, CRUNCH
 	db 50, PSYCHIC_M
@@ -2787,7 +2787,7 @@ GranbullEvosAttacks:
 	db 8, CHARM
 	db 13, BITE
 	db 19, STOMP
-	db 28, VITAL_THRPW
+	db 28, VITAL_THROW
 	db 36, TAKE_DOWN
 	db 43, DOUBLE_EDGE
 	db 0 ; no more level-up moves
@@ -2837,7 +2837,7 @@ HeracrossEvosAttacks:
 	db 6, HORN_ATTACK
 	db 12, ENDURE
 	db 19, FURY_ATTACK
-	db 27, VICE_GRIP
+	db 27, VICEGRIP
 	db 35, VITAL_THROW
 	db 44, REVERSAL
 	db 54, MEGAHORN
@@ -2931,7 +2931,7 @@ PiloswineEvosAttacks:
 	db 1, POWDER_SNOW
 	db 1, ENDURE
 	db 10, POWDER_SNOW
-	db 33, FURY_ATTAACK
+	db 33, FURY_ATTACK
 	db 37, SKULL_BASH
 	db 42, ICY_WIND
 	db 47, MIST
