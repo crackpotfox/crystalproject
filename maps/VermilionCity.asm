@@ -5,6 +5,11 @@
 	const VERMILIONCITY_SUPER_NERD
 	const VERMILIONCITY_BIG_SNORLAX
 	const VERMILIONCITY_POKEFAN_M
+	const VERMILIONCITY_MART_1
+	const VERMILIONCITY_MART_2
+	const VERMILIONCITY_MART_3
+	const VERMILIONCITY_MART_4
+	const VERMILIONCITY_MART_5
 
 VermilionCity_MapScripts:
 	def_scene_scripts
@@ -18,6 +23,40 @@ VermilionCityFlypointCallback:
 
 VermilionCityTeacherScript:
 	jumptextfaceplayer VermilionCityTeacherText
+
+VermilionCityMart1Script:
+	faceplayer
+	opentext
+	pokemart MARTTYPE_STANDARD, MART_VERMILION_1
+	closetext
+	end
+
+VermilionCityMart2Script:
+	faceplayer
+	opentext
+	pokemart MARTTYPE_STANDARD, MART_VERMILION_2
+	closetext
+	end
+
+VermilionCityMart3Script:
+	faceplayer
+	opentext
+	pokemart MARTTYPE_STANDARD, MART_VERMILION_3
+	closetext
+	end
+VermilionCityMart4Script:
+	faceplayer
+	opentext
+	pokemart MARTTYPE_STANDARD, MART_VERMILION_4
+	closetext
+	end
+
+VermilionCityMart5Script:
+	faceplayer
+	opentext
+	pokemart MARTTYPE_STANDARD, MART_VERMILION_5
+	closetext
+	end
 
 VermilionMachopOwner:
 	jumptextfaceplayer VermilionMachopOwnerText
@@ -299,3 +338,8 @@ VermilionCity_MapEvents:
 	object_event 14, 16, SPRITE_SUPER_NERD, SPRITEMOVEDATA_WANDER, 1, 1, -1, -1, PAL_NPC_GREEN, OBJECTTYPE_SCRIPT, 0, VermilionCitySuperNerdScript, -1
 	object_event 34,  8, SPRITE_BIG_SNORLAX, SPRITEMOVEDATA_BIGDOLLSYM, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, VermilionSnorlax, EVENT_VERMILION_CITY_SNORLAX
 	object_event 31, 12, SPRITE_POKEFAN_M, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, PAL_NPC_RED, OBJECTTYPE_SCRIPT, 0, VermilionGymBadgeGuy, -1
+	object_event 18, 6, SPRITE_CLERK, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, VermilionCityMart1Script, -1
+	object_event 19, 6, SPRITE_CLERK, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, VermilionCityMart2Script, -1
+	object_event 20, 6, SPRITE_CLERK, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, VermilionCityMart3Script, -1
+	object_event 21, 6, SPRITE_CLERK, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, VermilionCityMart4Script, -1
+	object_event 22, 6, SPRITE_CLERK, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, VermilionCityMart5Script, -1
