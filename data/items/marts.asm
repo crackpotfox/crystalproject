@@ -9,6 +9,7 @@ Marts:
 	dw MartGoldenrod2F1
 	dw MartGoldenrod2F2
 	dw MartGoldenrod3F
+	dw MartGoldenrod3F2
 	dw MartGoldenrod4F
 	dw MartGoldenrod5F1
 	dw MartGoldenrod5F2
@@ -122,6 +123,20 @@ MartGoldenrod3F:
 	db DIRE_HIT
 	db GUARD_SPEC
 	db X_ACCURACY
+	db -1 ; end
+
+MartGoldenrod3F2:
+	db 6 ; # items
+	db FIRE_STONE
+	db THUNDERSTONE
+	db WATER_STONE
+	db LEAF_STONE
+	db MOON_STONE
+	db SUN_STONE
+	db UP_GRADE
+	db KINGS_ROCK
+	db METAL_COAT
+	db DRAGON_SCALE
 	db -1 ; end
 
 MartGoldenrod4F:
@@ -276,7 +291,7 @@ MartLavender:
 	db -1 ; end
 
 MartVermilion:
-	db 58 ; # items
+	db 8 ; # items
 	db ULTRA_BALL
 	db SUPER_POTION
 	db HYPER_POTION
@@ -285,56 +300,6 @@ MartVermilion:
 	db AWAKENING
 	db BURN_HEAL
 	db LITEBLUEMAIL
-	db TM_DYNAMICPUNCH 
-	db TM_HEADBUTT     
-	db TM_CURSE        
-	db TM_ROLLOUT      
-	db TM_ROAR         
-	db TM_TOXIC        
-	db TM_ZAP_CANNON   
-	db TM_ROCK_SMASH   
-	db TM_PSYCH_UP     
-	db TM_HIDDEN_POWER 
-	db TM_SUNNY_DAY    
-	db TM_SWEET_SCENT  
-	db TM_SNORE        
-	db TM_BLIZZARD     
-	db TM_HYPER_BEAM   
-	db TM_ICY_WIND     
-	db TM_PROTECT      
-	db TM_RAIN_DANCE   
-	db TM_GIGA_DRAIN   
-	db TM_ENDURE       
-	db TM_FRUSTRATION  
-	db TM_SOLARBEAM    
-	db TM_IRON_TAIL    
-	db TM_DRAGONBREATH 
-	db TM_THUNDER      
-	db TM_EARTHQUAKE   
-	db TM_RETURN       
-	db TM_DIG          
-	db TM_PSYCHIC_M    
-	db TM_SHADOW_BALL  
-	db TM_MUD_SLAP     
-	db TM_DOUBLE_TEAM  
-	db TM_ICE_PUNCH    
-	db TM_SWAGGER      
-	db TM_SLEEP_TALK   
-	db TM_SLUDGE_BOMB  
-	db TM_SANDSTORM    
-	db TM_FIRE_BLAST   
-	db TM_SWIFT        
-	db TM_DEFENSE_CURL 
-	db TM_THUNDERPUNCH 
-	db TM_DREAM_EATER  
-	db TM_DETECT       
-	db TM_REST         
-	db TM_ATTRACT      
-	db TM_THIEF        
-	db TM_STEEL_WING   
-	db TM_FIRE_PUNCH   
-	db TM_FURY_CUTTER  
-	db TM_NIGHTMARE    
 	db -1 ; end
 
 MartCeladon2F1:
