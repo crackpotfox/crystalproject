@@ -1069,7 +1069,7 @@ JohtoGrassWildMons:
 	def_grass_wildmons SILVER_CAVE_ROOM_1
 	db 6 percent, 6 percent, 6 percent ; encounter rates: morn/day/nite
 	; morn
-	db 73, AERODACTYL
+	db 73, URSARING
 	db 73, CROBAT
 	db 72, GOLEM
 	db 72, SNEASEL
@@ -1077,7 +1077,7 @@ JohtoGrassWildMons:
 	db 72, PILOSWINE
 	db 75, TYRANITAR
 	; day
-	db 73, AERODACTYL
+	db 73, URSARING
 	db 73, CROBAT
 	db 72, GOLEM
 	db 72, SNEASEL
@@ -1085,7 +1085,7 @@ JohtoGrassWildMons:
 	db 72, PILOSWINE
 	db 75, TYRANITAR
 	; nite
-	db 73, AERODACTYL
+	db 73, GENGAR
 	db 73, CROBAT
 	db 72, GOLEM
 	db 72, SNEASEL
@@ -1097,7 +1097,7 @@ JohtoGrassWildMons:
 	def_grass_wildmons SILVER_CAVE_ROOM_2
 	db 6 percent, 6 percent, 6 percent ; encounter rates: morn/day/nite
 	; morn
-	db 73, AERODACTYL
+	db 73, URSARING
 	db 73, MACHAMP
 	db 72, STEELIX
 	db 72, SNEASEL
@@ -1105,7 +1105,7 @@ JohtoGrassWildMons:
 	db 72, PILOSWINE
 	db 75, TYRANITAR
 	; day
-	db 73, AERODACTYL
+	db 73, URSARING
 	db 73, MACHAMP
 	db 72, STEELIX
 	db 72, SNEASEL
@@ -1113,7 +1113,7 @@ JohtoGrassWildMons:
 	db 72, PILOSWINE
 	db 75, TYRANITAR
 	; nite
-	db 73, AERODACTYL
+	db 73, GENGAR
 	db 73, MACHAMP
 	db 72, STEELIX
 	db 72, SNEASEL
@@ -1687,7 +1687,7 @@ JohtoGrassWildMons:
 	; morn
 	db 68, SNEASEL
 	db 70, ALAKAZAM
-	db 72, AERODACTYL
+	db 72, URSARING
 	db 70, NIDOQUEEN
 	db 70, NIDOKING
 	db 72, TYRANITAR
@@ -1695,7 +1695,7 @@ JohtoGrassWildMons:
 	; day
 	db 68, SNEASEL
 	db 70, ALAKAZAM
-	db 72, AERODACTYL
+	db 72, URSARING
 	db 70, NIDOQUEEN
 	db 70, NIDOKING
 	db 72, TYRANITAR
@@ -1703,7 +1703,7 @@ JohtoGrassWildMons:
 	; nite
 	db 68, SNEASEL
 	db 70, CROBAT
-	db 72, AERODACTYL
+	db 72, GENGAR
 	db 70, NIDOQUEEN
 	db 70, NIDOKING
 	db 72, TYRANITAR

@@ -109,8 +109,8 @@ JohtoWaterWildMons:
 
 	def_water_wildmons DARK_CAVE_BLACKTHORN_ENTRANCE
 	db 2 percent ; encounter rate
-	db 33, OMANYTE
-	db 33, KABUTO
+	db 33, GOLDEEN
+	db 33, SEAKING
 	db 5, MAGIKARP
 	end_water_wildmons
 
