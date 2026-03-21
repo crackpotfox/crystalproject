@@ -121,11 +121,11 @@ AI_Setup:
 
 .statup
 	ld a, [wPlayerSubStatus3]
-	and 1 << SUBSTATUS_FLYING | 1 << SUBSTATUS_UNDEGROUND
+	and 1 << SUBSTATUS_FLYING | 1 << SUBSTATUS_UNDERGROUND
 	jr z, .statup_continue
 
 	call AICompareSpeed
-	jr c, .do_enourage
+	jr c, .do_encourage
 
 .statup_continue
 	ld a, [wEnemyTurnsTaken]
@@ -180,7 +180,7 @@ AI_Types:
 	ld b, NUM_MOVES + 1
 .checkmove
 	dec b
-	jr z .checkrain
+	jr z, .checkrain
 
 	inc hl
 	ld a, [de]

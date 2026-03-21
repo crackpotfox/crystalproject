@@ -6062,7 +6062,7 @@ LoadEnemyMon:
 ; These are the DVs we'll use if we're actually in a trainer battle
 	ld a, [wBattleMode]
 	dec a
-	jr nz, .UpdateDVs
+	jp nz, .UpdateDVs
 
 ; Wild DVs
 ; Here's where the fun starts
@@ -6091,7 +6091,7 @@ LoadEnemyMon:
 ; Get back the result of our check
 	pop af
 ; If the RoamMon struct has already been initialized, we're done
-	jr nz, .UpdateDVs
+	jp nz, .UpdateDVs
 
 ; If it hasn't, we need to initialize the DVs
 ; (HP is initialized at the end of the battle)
@@ -6104,7 +6104,7 @@ LoadEnemyMon:
 	ld [hl], a
 	ld b, a
 ; We're done with DVs
-	jr .UpdateDVs
+	jp .UpdateDVs
 
 .NotRoaming:
 
