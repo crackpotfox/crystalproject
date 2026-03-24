@@ -22,7 +22,85 @@ VermilionCityFlypointCallback:
 	endcallback
 
 VermilionCityTeacherScript:
-	jumptextfaceplayer VermilionCityTeacherText
+	faceplayer
+	checkevent EVENT_RECIEVED_SQUIRTLE
+	iftrue .AlreadyGotGiftPoke
+	readvar VAR_PARTYCOUNT
+	ifequal PARTY_LENGTH, .PartyFullGift
+	opentext
+	writetext AskSquirtleText
+	yesorno;promptbutton
+	iftrue .giftmon
+	writetext SquirtleRefusedText
+	promptbutton
+	closetext
+	end
+
+.giftmon
+	writetext SquirtleAcceptedText
+	promptbutton
+	getmonname STRING_BUFFER_3, SQUIRTLE
+	writetext RecievedGiftText6
+	promptbutton
+	givepoke SQUIRTLE, 10, BERRY
+	setevent EVENT_RECIEVED_SQUIRTLE
+	closetext
+	end
+
+.AlreadyGotGiftPoke:
+	opentext
+	writetext AlreadyGotSquirtleText
+	waitbutton
+	closetext
+	end
+
+.PartyFullGift:
+	opentext
+	writetext PartyFullGiftText
+	waitbutton
+	closetext
+	end
+
+AskSquirtleText:
+	text "You beat the"
+	line "CHAMPION!?"
+	
+	para "You must be a"
+	line "good trainer."
+
+	para "I just caught a"
+	line "#MON that was"
+	cont "always getting"
+	cont "into mischief."
+
+	para "Would you take"
+	line "good care of it?"
+	done
+
+
+SquirtleRefusedText:
+	text "Oh, okay. Maybe"
+	line "Someone else can"
+
+	para "take care of it."
+	done
+
+SquirtleAcceptedText:
+	text "OK! Please treat"
+	line "SQUIRTLE right!"
+	done
+
+AlreadyGotSquirtleText:
+	text "Please treat"
+	line "SQUIRTLE right!"
+	done
+
+RecievedGiftText6:
+	text "<PLAYER> recieved"
+	line "@"
+	text_ram wStringBuffer3
+	text "!"
+	done
 
 VermilionCityMart1Script:
 	faceplayer
@@ -161,16 +239,6 @@ VermilionCityMartSign:
 
 VermilionCityHiddenFullHeal:
 	hiddenitem FULL_HEAL, EVENT_VERMILION_CITY_HIDDEN_FULL_HEAL
-
-VermilionCityTeacherText:
-	text "VERMILION PORT is"
-	line "KANTO's seaside"
-	cont "gateway."
-
-	para "Luxury liners from"
-	line "around the world"
-	cont "dock here."
-	done
 
 VermilionMachopOwnerText:
 	text "My #MON is"
@@ -332,7 +400,7 @@ VermilionCity_MapEvents:
 	bg_event 12, 19, BGEVENT_ITEM, VermilionCityHiddenFullHeal
 
 	def_object_events
-	object_event 18,  9, SPRITE_TEACHER, SPRITEMOVEDATA_WANDER, 1, 1, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, VermilionCityTeacherScript, -1
+	object_event 18,  9, SPRITE_OFFICER, SPRITEMOVEDATA_WANDER, 1, 1, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_SCRIPT, 0, VermilionCityTeacherScript, -1
 	object_event 23,  6, SPRITE_GRAMPS, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, VermilionMachopOwner, -1
 	object_event 26,  7, SPRITE_MACHOP, SPRITEMOVEDATA_POKEMON, 0, 0, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_SCRIPT, 0, VermilionMachop, -1
 	object_event 14, 16, SPRITE_SUPER_NERD, SPRITEMOVEDATA_WANDER, 1, 1, -1, -1, PAL_NPC_GREEN, OBJECTTYPE_SCRIPT, 0, VermilionCitySuperNerdScript, -1

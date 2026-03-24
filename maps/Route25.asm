@@ -10,6 +10,7 @@
 	const ROUTE25_SUPER_NERD
 	const ROUTE25_COOLTRAINER_M2
 	const ROUTE25_POKE_BALL
+	const ROUTE25_CHARMANDER
 
 Route25_MapScripts:
 	def_scene_scripts
@@ -23,6 +24,82 @@ Route25Noop1Scene:
 
 Route25Noop2Scene:
 	end
+
+Route25CharmanderScript:
+	faceplayer
+	checkevent EVENT_RECIEVED_CHARMANDER
+	iftrue .AlreadyGotGiftPoke
+	readvar VAR_PARTYCOUNT
+	ifequal PARTY_LENGTH, .PartyFullGift
+	opentext
+	writetext AskCharmanderText
+	yesorno;promptbutton
+	iftrue .giftmon
+	writetext CharmanderRefusedText
+	promptbutton
+	closetext
+	end
+
+.giftmon
+	writetext CharmanderAcceptedText
+	promptbutton
+	getmonname STRING_BUFFER_3, CHARMANDER
+	writetext RecievedGiftText5
+	promptbutton
+	givepoke CHARMANDER, 10, BERRY
+	setevent EVENT_RECIEVED_CHARMANDER
+	closetext
+	end
+
+.AlreadyGotGiftPoke:
+	opentext
+	writetext AlreadyGotCharmanderText
+	waitbutton
+	closetext
+	end
+
+.PartyFullGift:
+	opentext
+	writetext PartyFullGiftText
+	waitbutton
+	closetext
+	end
+
+AskCharmanderText:
+	text "I can't handle"
+	line "this #mon!"
+	
+	para "Would you take"
+	line "it?"
+	done
+
+CharmanderRefusedText:
+	text "Oh, okay. Maybe"
+	line "Someone else can"
+
+	para "take care of it."
+	done
+
+CharmanderAcceptedText:
+	text "That's great,"
+	line "take good care of"
+	
+	para "it!"
+	done
+
+AlreadyGotCharmanderText:
+	text "I hope you can"
+	line "handle that"
+
+	para "#MON!"
+	done
+
+RecievedGiftText5:
+	text "<PLAYER> recieved"
+	line "@"
+	text_ram wStringBuffer3
+	text "!"
+	done
 
 Route25MistyDate1Script:
 	showemote EMOTE_HEART, ROUTE25_MISTY, 15
@@ -453,3 +530,4 @@ Route25_MapEvents:
 	object_event 31,  7, SPRITE_SUPER_NERD, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, PAL_NPC_BROWN, OBJECTTYPE_TRAINER, 1, TrainerSupernerdPat, -1
 	object_event 37,  8, SPRITE_COOLTRAINER_M, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, PAL_NPC_RED, OBJECTTYPE_SCRIPT, 0, TrainerCooltrainermKevin, -1
 	object_event 32,  4, SPRITE_POKE_BALL, SPRITEMOVEDATA_STILL, 0, 0, -1, -1, 0, OBJECTTYPE_ITEMBALL, 0, Route25Protein, EVENT_ROUTE_25_PROTEIN
+	object_event 5, 5, SPRITE_YOUNGSTER, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, PAL_NPC_RED, OBJECTTYPE_SCRIPT, 0, Route25CharmanderScript, -1
