@@ -11,6 +11,7 @@
 	const CIANWOODCITY_POKEFAN_F
 	const CIANWOODCITY_EUSINE
 	const CIANWOODCITY_SUICUNE
+	const CIANWOODCITY_TOTODILE
 
 CianwoodCity_MapScripts:
 	def_scene_scripts
@@ -34,6 +35,98 @@ CianwoodCityFlypointAndSuicuneCallback:
 	disappear CIANWOODCITY_EUSINE
 .Done:
 	endcallback
+
+CianwoodCityTotodileScript:
+	faceplayer
+	checkevent EVENT_RECIEVED_TOTODILE
+	iftrue .AlreadyGotGiftPoke
+	checkevent EVENT_GOT_TOTODILE_FROM_ELM
+	iftrue .CyndaquilFromElm
+	readvar VAR_PARTYCOUNT
+	ifequal PARTY_LENGTH, .PartyFullGift
+	opentext
+	writetext CianwoodCityTotodileText
+	yesorno;promptbutton
+	iftrue .giftmon
+	writetext TotodileRefusedText
+	promptbutton
+	closetext
+
+.giftmon
+	writetext TotodileAcceptedText
+	getmonname STRING_BUFFER_3, TOTODILE
+	writetext RecievedGiftText3
+	promptbutton
+	givepoke TOTODILE, 10, BERRY
+	setevent EVENT_RECIEVED_TOTODILE
+	closetext
+	end
+
+.CyndaquilFromElm
+	opentext
+	writetext TotodileFromElmText
+	waitbutton
+	closetext
+	end
+
+.AlreadyGotGiftPoke:
+	opentext
+	writetext AlreadyGotTotodileText
+	waitbutton
+	closetext
+	end
+
+.PartyFullGift:
+	opentext
+	writetext PartyFullGiftText
+	waitbutton
+	closetext
+	end
+
+TotodileFromElmText:	
+	text "I just fished up"
+	line "this #MON."
+	
+	para "It's a little"
+	line "too feral for me."
+	done
+
+TotodileAcceptedText:
+	text "That's great,"
+	line "take good care of"
+	
+	para "it!"
+	done
+
+TotodileRefusedText:
+	text "Oh, okay. Maybe"
+	line "Someone else can"
+
+	para "take care of it."
+	done
+
+AlreadyGotTotodileText:
+	text "Good Luck raising"
+	line "that crazy #MON"
+	done
+
+CianwoodCityTotodileText:
+	text "I just fished up"
+	line "this #MON."
+	
+	para "It's a little"
+	line "too feral for me."
+
+	para "Would you please"
+	line "take it?"
+	done
+
+RecievedGiftText3:
+	text "<PLAYER> recieved"
+	line "@"
+	text_ram wStringBuffer3
+	text "!"
+	done
 
 CianwoodCitySuicuneAndEusine:
 	turnobject PLAYER, UP
@@ -415,3 +508,4 @@ CianwoodCity_MapEvents:
 	object_event 10, 46, SPRITE_POKEFAN_F, SPRITEMOVEDATA_WALK_LEFT_RIGHT, 1, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, CianwoodCityChucksWife, -1
 	object_event 11, 21, SPRITE_SUPER_NERD, SPRITEMOVEDATA_STANDING_UP, 0, 0, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_SCRIPT, 0, ObjectEvent, EVENT_CIANWOOD_CITY_EUSINE
 	object_event 10, 14, SPRITE_SUICUNE, SPRITEMOVEDATA_STILL, 0, 0, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_SCRIPT, 0, ObjectEvent, EVENT_SAW_SUICUNE_AT_CIANWOOD_CITY
+	object_event 27, 38, SPRITE_FISHING_GURU, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_SCRIPT, 0, CianwoodCityTotodileScript, -1 

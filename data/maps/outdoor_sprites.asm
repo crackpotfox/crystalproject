@@ -55,6 +55,7 @@ CinnabarGroupSprites:
 	; max 9 of 9 walking sprites
 	db SPRITE_POKE_BALL
 	db SPRITE_FRUIT_TREE
+	db SPRITE_BIRD
 	db 0 ; end
 
 ; CeruleanCity and Route5 are connected
@@ -74,6 +75,8 @@ SaffronGroupSprites:
 	; max 9 of 9 walking sprites
 	db SPRITE_POKE_BALL
 	db SPRITE_SLOWPOKE
+	db SPRITE_MONSTER
+	db SPRITE_BIRD
 	db 0 ; end
 
 CeladonGroupSprites:
@@ -109,6 +112,8 @@ FuchsiaGroupSprites:
 	db SPRITE_MACHOP
 	db SPRITE_POKE_BALL
 	db SPRITE_FRUIT_TREE
+	db SPRITE_OFFICER
+	db SPRITE_CLERK
 	db 0 ; end
 
 IndigoGroupSprites:
@@ -207,6 +212,7 @@ CianwoodGroupSprites:
 	db SPRITE_ROCK
 	db SPRITE_YOUNGSTER ; non-walking version of SPRITE_YOUNGSTER
 	db SPRITE_SUICUNE
+	db SPRITE_FISHING_GURU
 	db 0 ; end
 
 MahoganyGroupSprites:

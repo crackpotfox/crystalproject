@@ -3,6 +3,7 @@
 	const ROUTE34ILEXFORESTGATE_BUTTERFREE
 	const ROUTE34ILEXFORESTGATE_LASS
 	const ROUTE34ILEXFORESTGATE_TEACHER2
+	const ROUTE34ILEXFORESTGATE_CHIKORITA
 
 Route34IlexForestGate_MapScripts:
 	def_scene_scripts
@@ -22,6 +23,98 @@ Route34IsForestRestlessCallback:
 	disappear ROUTE34ILEXFORESTGATE_TEACHER2
 	appear ROUTE34ILEXFORESTGATE_TEACHER1
 	endcallback
+
+Route34IlexForestGateChikoritaScript:
+	faceplayer
+	checkevent EVENT_RECIEVED_CHIKORITA
+	iffalse .AlreadyGotGiftPoke
+	checkevent EVENT_GOT_CHIKORITA_FROM_ELM
+	iftrue .CyndaquilFromElm
+	readvar VAR_PARTYCOUNT
+	ifequal PARTY_LENGTH, .PartyFullGift
+	opentext
+	writetext IlexForestChikoritaText
+	yesorno;promptbutton
+	iftrue .giftmon
+	writetext ChikoritaRefusedText
+	promptbutton
+	closetext
+	end
+
+.giftmon
+	writetext ChikoritaAcceptedText
+	getmonname STRING_BUFFER_3, CHIKORITA
+	writetext RecievedGiftText2
+	promptbutton
+	givepoke CHIKORITA, 10, BERRY
+	clearevent EVENT_RECIEVED_CHIKORITA
+	closetext
+	end
+
+.CyndaquilFromElm
+	opentext
+	writetext ChikoritaFromElmText
+	waitbutton
+	closetext
+	end
+
+.AlreadyGotGiftPoke:
+	opentext
+	writetext AlreadyGotChikoritaText
+	waitbutton
+	closetext
+	end
+
+.PartyFullGift:
+	opentext
+	writetext PartyFullGiftText
+	waitbutton
+	closetext
+	end
+
+ChikoritaAcceptedText:
+	text "That's great,"
+	line "take good care of"
+	
+	para "it!"
+	done
+
+ChikoritaRefusedText:
+	text "Oh, okay. Maybe"
+	line "Someone else can"
+
+	para "take care of it."
+	done
+
+AlreadyGotChikoritaText:
+	text "I hope that"
+	line "#MON gets"
+	cont "better!"
+	done
+
+IlexForestChikoritaText:
+	text "I just found this"
+	line "injured #MON."
+
+	para "It was all alone"
+	line "between the trees"
+
+	para "Would you please"
+	line "take it?"
+	done
+ChikoritaFromElmText:
+	text "I just found this"
+	line "injured #MON."
+
+	para "I hope someone can"
+	line "take care of it."
+
+RecievedGiftText2:
+	text "<PLAYER> recieved"
+	line "@"
+	text_ram wStringBuffer3
+	text "!"
+	done
 
 Route34IlexForestGateCelebiEvent:
 	checkevent EVENT_FOREST_IS_RESTLESS
@@ -153,3 +246,4 @@ Route34IlexForestGate_MapEvents:
 	object_event  9,  4, SPRITE_BUTTERFREE, SPRITEMOVEDATA_POKEMON, 0, 0, -1, -1, PAL_NPC_RED, OBJECTTYPE_SCRIPT, 0, Route34IlexForestGateButterfreeScript, -1
 	object_event  3,  4, SPRITE_LASS, SPRITEMOVEDATA_WALK_UP_DOWN, 0, 1, -1, -1, PAL_NPC_GREEN, OBJECTTYPE_SCRIPT, 0, Route34IlexForestGateLassScript, EVENT_ROUTE_34_ILEX_FOREST_GATE_LASS
 	object_event  5,  7, SPRITE_TEACHER, SPRITEMOVEDATA_STANDING_UP, 0, 0, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_SCRIPT, 0, Route34IlexForestGateTeacherScript, EVENT_ROUTE_34_ILEX_FOREST_GATE_TEACHER_IN_WALKWAY
+	object_event 6, 2, SPRITE_LASS, SPRITEMOVEDATA_WALK_UP_DOWN, 0, 1, -1, -1, PAL_NPC_BROWN, OBJECTTYPE_SCRIPT, 0, Route34IlexForestGateChikoritaScript, -1

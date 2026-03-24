@@ -6,6 +6,7 @@
 	const ECRUTEAKCITY_FISHER
 	const ECRUTEAKCITY_YOUNGSTER
 	const ECRUTEAKCITY_GRAMPS3
+	const ECRUTEAKCITY_GRAMPSGIFT
 
 EcruteakCity_MapScripts:
 	def_scene_scripts
@@ -16,6 +17,108 @@ EcruteakCity_MapScripts:
 EcruteakCityFlypointCallback:
 	setflag ENGINE_FLYPOINT_ECRUTEAK
 	endcallback
+
+EcruteakCityCyndaquilScript:
+	faceplayer
+	checkevent EVENT_RECIEVED_CYNDAQUIL
+	iftrue .AlreadyGotGiftPoke
+	checkevent EVENT_GOT_CYNDAQUIL_FROM_ELM
+	iftrue .CyndaquilFromElm
+	readvar VAR_PARTYCOUNT
+	ifequal PARTY_LENGTH, .PartyFullGift
+	opentext
+	writetext EcruteakCityCyndaquilText
+	yesorno;promptbutton
+	iftrue .giftmon
+	writetext CyndaquilRefusedText
+	promptbutton
+	closetext
+	end
+
+.giftmon
+	writetext CyndaquilAcceptedText
+	promptbutton
+	getmonname STRING_BUFFER_3, CYNDAQUIL
+	writetext RecievedGiftText
+	promptbutton
+	givepoke CYNDAQUIL, 10, BERRY
+	setevent EVENT_RECIEVED_CYNDAQUIL
+	closetext
+	end
+
+.CyndaquilFromElm
+	opentext
+	writetext CyndaquilFromElmText
+	waitbutton
+	closetext
+	end
+
+.AlreadyGotGiftPoke:
+	opentext
+	writetext AlreadyGotGiftText
+	waitbutton
+	closetext
+	end
+
+.PartyFullGift:
+	opentext
+	writetext PartyFullGiftText
+	waitbutton
+	closetext
+	end
+
+CyndaquilAcceptedText:
+	text "That's great,"
+	line "take good care of"
+	
+	para "it!"
+	done
+
+CyndaquilRefusedText:
+	text "Oh, okay. Maybe"
+	line "Someone else can"
+
+	para "take care of it."
+	done	
+
+CyndaquilFromElmText:
+	text "I found this"
+	line "#MON after the"
+	
+	para "fire."
+
+	para "I hope someone"
+	line "will take it."
+	done
+
+PartyFullGiftText:
+	text "I'm sorry, but"
+	line "your party seems"
+	
+	para "to be full."
+	done
+
+AlreadyGotGiftText:
+	text "I hope that little"
+	line "#MON is doing"
+
+	para "well."
+	done
+
+EcruteakCityCyndaquilText:
+	text "I found this"
+	line "#MON after the"
+
+	para "fire. Would you"
+	line "please take it?"
+	done
+
+RecievedGiftText:
+	text "<PLAYER> recieved"
+	line "@"
+	text_ram wStringBuffer3
+	text "!"
+	done
 
 EcruteakCityGramps1Script:
 	jumptextfaceplayer EcruteakCityGramps1Text
@@ -296,3 +399,4 @@ EcruteakCity_MapEvents:
 	object_event  9, 22, SPRITE_FISHER, SPRITEMOVEDATA_WALK_LEFT_RIGHT, 1, 0, -1, -1, PAL_NPC_GREEN, OBJECTTYPE_SCRIPT, 0, EcruteakCityFisherScript, -1
 	object_event 10, 14, SPRITE_YOUNGSTER, SPRITEMOVEDATA_WANDER, 1, 1, -1, -1, PAL_NPC_RED, OBJECTTYPE_SCRIPT, 0, EcruteakCityYoungsterScript, -1
 	object_event  3,  7, SPRITE_GRAMPS, SPRITEMOVEDATA_WANDER, 1, 1, -1, -1, PAL_NPC_GREEN, OBJECTTYPE_SCRIPT, 0, EcruteakCityGramps3Script, EVENT_ECRUTEAK_CITY_GRAMPS
+	object_event 8, 10, SPRITE_GRAMPS, SPRITEMOVEDATA_STANDING_UP, 0, 0, -1, -1, PAL_NPC_GREEN, OBJECTTYPE_SCRIPT, 0, EcruteakCityCyndaquilScript, -1 
