@@ -185,3 +185,4 @@ SpecialsPointers::
 	add_special UnusedDummySpecial ; unused
 
 	add_special TradebackNPC
+	add_special MoveReminder
