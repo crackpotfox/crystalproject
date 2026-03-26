@@ -842,4 +842,144 @@ KantoGrassWildMons:
 	db 70, KANGASKHAN
 	end_grass_wildmons
 
+	def_grass_wildmons SEAFOAM_1F
+	db 10 percent, 10 percent, 10 percent
+	; morn
+	db 55, GOLBAT
+	db 55, GOLDUCK
+	db 55, SLOWPOKE
+	db 55, SLOWBRO
+	db 55, SEEL
+	db 55, STARYU
+	db 55, SEADRA
+	;day
+	db 55, GOLBAT
+	db 55, GOLDUCK
+	db 55, SLOWPOKE
+	db 55, SLOWBRO
+	db 55, SEEL
+	db 55, STARYU
+	db 55, SEADRA
+	;nite
+	db 55, GOLBAT
+	db 55, GOLDUCK
+	db 55, SLOWPOKE
+	db 55, SLOWBRO
+	db 55, SEEL
+	db 55, STARYU
+	db 55, SEADRA
+	end_grass_wildmons
+
+	def_grass_wildmons SEAFOAM_2F
+	db 10 percent, 10 percent, 10 percent
+	; morn
+	db 55, GOLBAT
+	db 55, GOLDUCK
+	db 55, SLOWPOKE
+	db 55, SLOWBRO
+	db 55, SEEL
+	db 55, STARYU
+	db 55, SEADRA
+	;day
+	db 55, GOLBAT
+	db 55, GOLDUCK
+	db 55, SLOWPOKE
+	db 55, SLOWBRO
+	db 55, SEEL
+	db 55, STARYU
+	db 55, SEADRA
+	;nite
+	db 55, GOLBAT
+	db 55, GOLDUCK
+	db 55, SLOWPOKE
+	db 55, SLOWBRO
+	db 55, SEEL
+	db 55, STARYU
+	db 55, SEADRA
+	end_grass_wildmons
+
+	def_grass_wildmons SEAFOAM_3F
+	db 10 percent, 10 percent, 10 percent
+	; morn
+	db 55, GOLBAT
+	db 55, GOLDUCK
+	db 55, SLOWPOKE
+	db 55, SLOWBRO
+	db 55, SEEL
+	db 55, STARYU
+	db 55, SEADRA
+	;day
+	db 55, GOLBAT
+	db 55, GOLDUCK
+	db 55, SLOWPOKE
+	db 55, SLOWBRO
+	db 55, SEEL
+	db 55, STARYU
+	db 55, SEADRA
+	;nite
+	db 55, GOLBAT
+	db 55, GOLDUCK
+	db 55, SLOWPOKE
+	db 55, SLOWBRO
+	db 55, SEEL
+	db 55, STARYU
+	db 55, SEADRA
+	end_grass_wildmons
+
+	def_grass_wildmons SEAFOAM_4F
+	db 10 percent, 10 percent, 10 percent
+	; morn
+	db 55, GOLBAT
+	db 55, GOLDUCK
+	db 55, SLOWPOKE
+	db 55, SLOWBRO
+	db 55, SEEL
+	db 55, STARYU
+	db 55, SEADRA
+	;day
+	db 55, GOLBAT
+	db 55, GOLDUCK
+	db 55, SLOWPOKE
+	db 55, SLOWBRO
+	db 55, SEEL
+	db 55, STARYU
+	db 55, SEADRA
+	;nite
+	db 55, GOLBAT
+	db 55, GOLDUCK
+	db 55, SLOWPOKE
+	db 55, SLOWBRO
+	db 55, SEEL
+	db 55, STARYU
+	db 55, SEADRA
+	end_grass_wildmons
+
+	def_grass_wildmons SEAFOAM_5F
+	db 10 percent, 10 percent, 10 percent
+	; morn
+	db 55, GOLBAT
+	db 55, GOLDUCK
+	db 55, SLOWPOKE
+	db 55, SLOWBRO
+	db 55, SEEL
+	db 55, STARYU
+	db 55, SEADRA
+	;day
+	db 55, GOLBAT
+	db 55, GOLDUCK
+	db 55, SLOWPOKE
+	db 55, SLOWBRO
+	db 55, SEEL
+	db 55, STARYU
+	db 55, SEADRA
+	;nite
+	db 55, GOLBAT
+	db 55, GOLDUCK
+	db 55, SLOWPOKE
+	db 55, SLOWBRO
+	db 55, SEEL
+	db 55, STARYU
+	db 55, SEADRA
+	end_grass_wildmons
+
 	db -1 ; end

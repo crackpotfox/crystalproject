@@ -1046,4 +1046,23 @@ BetaBlank_Blocks: ; unreferenced
 GoldenrodDeptStoreRoof_Blocks:
 	INCBIN "maps/GoldenrodDeptStoreRoof.blk"
 
+;ENDSECTION
+
+SECTION "Map Blocks 4", ROMX
+
+Seafoam1F_Blocks:
+	INCBIN "maps/Seafoam1F.blk"
+
+Seafoam2F_Blocks:
+	INCBIN "maps/Seafoam2F.blk"
+
+Seafoam3F_Blocks:
+	INCBIN "maps/Seafoam3F.blk"
+
+Seafoam4F_Blocks:
+	INCBIN "maps/Seafoam4F.blk"
+
+Seafoam5F_Blocks:
+	INCBIN "maps/Seafoam5F.blk"
+
 ENDSECTION

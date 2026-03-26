@@ -135,6 +135,9 @@ Route20_MapEvents:
 
 	def_warp_events
 	warp_event 38,  7, SEAFOAM_GYM, 1
+	warp_event 32,  5, SEAFOAM_1F,  1
+	warp_event 40,  7, SEAFOAM_1F,  2
+
 
 	def_coord_events
 
