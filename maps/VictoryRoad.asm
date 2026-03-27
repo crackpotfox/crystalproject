@@ -5,6 +5,7 @@
 	const VICTORYROAD_POKE_BALL3
 	const VICTORYROAD_POKE_BALL4
 	const VICTORYROAD_POKE_BALL5
+	const VICTORYROAD_BOULDER
 
 VictoryRoad_MapScripts:
 	def_scene_scripts
@@ -161,6 +162,9 @@ VictoryRoadRivalBattleExitMovement2:
 	step DOWN
 	step_end
 
+VictoryRoadBoulderScript:
+	jumpstd StrengthBoulderScript
+
 VictoryRoadRivalBeforeText:
 	text "Hold it."
 
@@ -250,6 +254,7 @@ VictoryRoad_MapEvents:
 	warp_event  0, 11, VICTORY_ROAD, 9
 	warp_event  0, 27, VICTORY_ROAD, 8
 	warp_event 13,  5, ROUTE_23, 3
+	warp_event 13, 28, MOLTRES_CHAMBER, 1
 
 	def_coord_events
 	coord_event 12,  8, SCENE_VICTORYROAD_RIVAL_BATTLE, VictoryRoadRivalLeft
@@ -266,3 +271,4 @@ VictoryRoad_MapEvents:
 	object_event 18, 29, SPRITE_POKE_BALL, SPRITEMOVEDATA_STILL, 0, 0, -1, -1, 0, OBJECTTYPE_ITEMBALL, 0, VictoryRoadFullRestore, EVENT_VICTORY_ROAD_FULL_RESTORE
 	object_event 15, 48, SPRITE_POKE_BALL, SPRITEMOVEDATA_STILL, 0, 0, -1, -1, 0, OBJECTTYPE_ITEMBALL, 0, VictoryRoadFullHeal, EVENT_VICTORY_ROAD_FULL_HEAL
 	object_event  7, 38, SPRITE_POKE_BALL, SPRITEMOVEDATA_STILL, 0, 0, -1, -1, 0, OBJECTTYPE_ITEMBALL, 0, VictoryRoadHPUp, EVENT_VICTORY_ROAD_HP_UP
+	object_event 13, 28, SPRITE_BOULDER, SPRITEMOVEDATA_STRENGTH_BOULDER, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, VictoryRoadBoulderScript, EVENT_BEAT_CHAMPION_LANCE

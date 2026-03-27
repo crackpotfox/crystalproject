@@ -1,25 +1,25 @@
 	object_const_def
-	const ROUTE10ZAPDOS
+;	const ROUTE10ZAPDOS
 
 Route10North_MapScripts:
 	def_scene_scripts
 
 	def_callbacks
 
-Route10ZapdosScript:
-	faceplayer
-	opentext
-	writetext ArticunoText
-	cry ZAPDOS
-	pause 15
-	closetext
-	setevent EVENT_FOUGHT_ZAPDOS
-	loadvar VAR_BATTLETYPE, BATTLETYPE_FORCEITEM
-	loadwildmon ZAPDOS, 70
-	startbattle
-	disappear ROUTE10ZAPDOS
-	reloadmapafterbattle
-	end
+;Route10ZapdosScript:
+;	faceplayer
+;	opentext
+;	writetext ArticunoText
+;	cry ZAPDOS
+;	pause 15
+;	closetext
+;	setevent EVENT_FOUGHT_ZAPDOS
+;	loadvar VAR_BATTLETYPE, BATTLETYPE_FORCEITEM
+;	loadwildmon ZAPDOS, 70
+;	startbattle
+;	disappear ROUTE10ZAPDOS
+;	reloadmapafterbattle
+;	end
 
 PowerPlantSign:
 	jumptext PowerPlantSignText
@@ -37,6 +37,7 @@ Route10North_MapEvents:
 	def_warp_events
 	warp_event 11,  1, ROUTE_10_POKECENTER_1F, 1
 	warp_event  3,  9, POWER_PLANT, 1
+	warp_event 1, 8, POWER_PLANT_BASEMENT, 2
 
 	def_coord_events
 
@@ -45,4 +46,4 @@ Route10North_MapEvents:
 	bg_event 12,  1, BGEVENT_READ, Route10PokecenterSign
 
 	def_object_events
-	object_event 2,10, SPRITE_BIRD, SPRITEMOVEDATA_STILL, 0, 0, -1, -1, PAL_NPC_BROWN, OBJECTTYPE_SCRIPT, 0, Route10ZapdosScript, EVENT_FOUGHT_ZAPDOS
+;	object_event 2,10, SPRITE_BIRD, SPRITEMOVEDATA_STILL, 0, 0, -1, -1, PAL_NPC_BROWN, OBJECTTYPE_SCRIPT, 0, Route10ZapdosScript, EVENT_FOUGHT_ZAPDOS

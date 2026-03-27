@@ -700,3 +700,5 @@ ENDM
 	map_attributes Seafoam3F, SEAFOAM_3F, $19, 0
 	map_attributes Seafoam4F, SEAFOAM_4F, $19, 0
 	map_attributes Seafoam5F, SEAFOAM_5F, $19, 0
+	map_attributes PowerPlantBasement, POWER_PLANT_BASEMENT, $00, 0 
+	map_attributes MoltresChamber, MOLTRES_CHAMBER, $19, 0
