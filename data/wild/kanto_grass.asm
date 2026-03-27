@@ -982,4 +982,31 @@ KantoGrassWildMons:
 	db 55, SEADRA
 	end_grass_wildmons
 
+	def_grass_wildmons POWER_PLANT_BASEMENT
+	db 10 percent, 10 percent, 10 percent
+	;morn
+	db 55, MAGNETON
+	db 55, RAICHU
+	db 55, AMPHAROS
+	db 55, ELECTABUZZ
+	db 55, VOLTORB
+	db 55, ELECTRODE
+	db 55, MAGNEMITE
+	;day
+	db 55, MAGNETON
+	db 55, RAICHU
+	db 55, AMPHAROS
+	db 55, ELECTABUZZ
+	db 55, VOLTORB
+	db 55, ELECTRODE
+	db 55, MAGNEMITE
+	;nite
+	db 55, MAGNETON
+	db 55, RAICHU
+	db 55, AMPHAROS
+	db 55, ELECTABUZZ
+	db 55, VOLTORB
+	db 55, ELECTRODE
+	db 55, MAGNEMITE
+	end_grass_wildmons
 	db -1 ; end
