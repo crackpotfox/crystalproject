@@ -159,7 +159,10 @@ ENDM
        	map_const SEAFOAM_3F,				       15, 9  ; 94
        	map_const SEAFOAM_4F,				       15, 9  ; 95
        	map_const SEAFOAM_5F,				       15, 9  ; 96
-	map_const MOLTRES_CHAMBER,                              10, 10 ; 97
+	map_const MOLTRES_CHAMBER,                             10, 10 ; 97
+	map_const CERULEAN_CAVE_1F,                            16, 10 ; 98
+	map_const CERULEAN_CAVE_2F,                            16, 10 ; 99
+	map_const CERULEAN_CAVE_3F,                            16, 10 ;100
 
 	endgroup
 

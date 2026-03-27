@@ -5,7 +5,8 @@
 	const CERULEANCITY_COOLTRAINER_F
 	const CERULEANCITY_FISHER
 	const CERULEANCITY_YOUNGSTER
-	const CERULEANCITY_MEWTWO
+;	const CERULEANCITY_MEWTWO
+	const CERULEANCITY_CAVEBLOCKER
 
 CeruleanCity_MapScripts:
 	def_scene_scripts
@@ -33,24 +34,24 @@ CeruleanCityCooltrainerMScript:
 	closetext
 	end
 
-CeruleanCityMewtwoScript:
-	faceplayer
-	opentext
-	writetext MewtwoText
-	cry MEWTWO
-	pause 15
-	closetext
-	setevent EVENT_FOUGHT_MEWTWO
-	loadvar VAR_BATTLETYPE, BATTLETYPE_FORCEITEM
-	loadwildmon MEWTWO, 70
-	startbattle
-	disappear CERULEANCITY_MEWTWO
-	reloadmapafterbattle
-	end
-
-MewtwoText:
-	text "Mew!"
-	done
+;CeruleanCityMewtwoScript:
+;	faceplayer
+;	opentext
+;	writetext MewtwoText
+;	cry MEWTWO
+;	pause 15
+;	closetext
+;	setevent EVENT_FOUGHT_MEWTWO
+;	loadvar VAR_BATTLETYPE, BATTLETYPE_FORCEITEM
+;	loadwildmon MEWTWO, 70
+;	startbattle
+;;	disappear CERULEANCITY_MEWTWO
+;	reloadmapafterbattle
+;	end
+;
+;MewtwoText:
+;	text "Mew!"
+;	done
 
 CeruleanCitySuperNerdScript:
 	jumptextfaceplayer CeruleanCitySuperNerdText
@@ -164,8 +165,31 @@ CeruleanCityPokecenterSign:
 CeruleanCityMartSign:
 	jumpstd MartSignScript
 
-CeruleanCityHiddenBerserkGene:
-	hiddenitem BERSERK_GENE, EVENT_FOUND_BERSERK_GENE_IN_CERULEAN_CITY
+;CeruleanCityHiddenBerserkGene:
+;	hiddenitem BERSERK_GENE, EVENT_FOUND_BERSERK_GENE_IN_CERULEAN_CITY
+
+CeruleanCityCaveBlockerScript:
+	faceplayer
+	opentext
+	writetext CCaveText
+	end
+
+CCaveText:
+	text "This is the"
+	line "enterance to"
+	cont "the Unknown"
+	cont "Dungeon."
+
+	para "It is quite"
+	line "dangerous in"
+	cont "there."
+
+	para "You want to go"
+	line "inside!? No."
+	cont "You can't"
+	cont "handle it in"
+	cont "there, sorry."
+	done
 
 CeruleanCityCooltrainerMText1:
 	text "KANTO's POWER"
@@ -303,6 +327,7 @@ CeruleanCity_MapEvents:
 	warp_event 19, 21, CERULEAN_POKECENTER_1F, 1
 	warp_event 30, 23, CERULEAN_GYM, 1
 	warp_event 25, 29, CERULEAN_MART, 2
+	warp_event 0, 13, CERULEAN_CAVE_1F, 1
 
 	def_coord_events
 
@@ -324,4 +349,5 @@ CeruleanCity_MapEvents:
 	object_event 21, 24, SPRITE_COOLTRAINER_F, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, PAL_NPC_GREEN, OBJECTTYPE_SCRIPT, 0, CeruleanCityCooltrainerFScript, -1
 	object_event 30, 26, SPRITE_FISHER, SPRITEMOVEDATA_WALK_LEFT_RIGHT, 1, 0, -1, -1, PAL_NPC_RED, OBJECTTYPE_SCRIPT, 0, CeruleanCityFisherScript, -1
 	object_event  6, 12, SPRITE_YOUNGSTER, SPRITEMOVEDATA_SPINRANDOM_SLOW, 1, 0, -1, -1, PAL_NPC_RED, OBJECTTYPE_SCRIPT, 0, CeruleanCityYoungsterScript, -1
-	object_event 2, 12, SPRITE_MONSTER, SPRITEMOVEDATA_STILL, 0, 0, -1, -1, PAL_NPC_PINK, OBJECTTYPE_SCRIPT, 0, CeruleanCityMewtwoScript, EVENT_FOUGHT_MEWTWO
+;	object_event 2, 12, SPRITE_MONSTER, SPRITEMOVEDATA_STILL, 0, 0, -1, -1, PAL_NPC_PINK, OBJECTTYPE_SCRIPT, 0, CeruleanCityMewtwoScript, EVENT_FOUGHT_MEWTWO
+	object_event 0, 14, SPRITE_COOLTRAINER_M, SPRITEMOVEDATA_STILL, 0, 0, -1, -1, PAL_NPC_RED, OBJECTTYPE_SCRIPT, 0, CeruleanCityCaveBlockerScript, EVENT_OPENED_MT_SILVER

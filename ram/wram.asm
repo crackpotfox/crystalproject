@@ -3633,8 +3633,8 @@ wScratchTilemap:: ds TILEMAP_AREA
 wScratchAttrmap:: ds TILEMAP_AREA
 
 NEXTU
-wDecompressScratch:: ds $80 tiles
-wDecompressEnemyFrontpic:: ds $80 tiles
+wDecompressScratch:: ds $100 tiles
+;wDecompressEnemyFrontpic:: ds $80 tiles
 
 NEXTU
 ; unidentified uses

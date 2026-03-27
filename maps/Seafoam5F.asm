@@ -1,7 +1,7 @@
 	object_const_def
 	const Seafoam5FBoulder1
 	const Seafoam5FBoulder2
-
+	const Articuno
 
 Seafoam5F_MapScripts:
 	def_scene_scripts
@@ -18,6 +18,25 @@ Seafoam5FStillBoulder:
 
 Seafoam5FUltraBall:
 	hiddenitem ULTRA_BALL, EVENT_SEAFOAM5F_ULTRABALL
+
+ArticunoScript:
+	faceplayer
+	opentext
+	writetext ArticunoText
+	cry ARTICUNO
+	pause 15
+	closetext
+	setevent EVENT_FOUGHT_ARTICUNO
+	loadvar VAR_BATTLETYPE, BATTLETYPE_FORCEITEM
+	loadwildmon ARTICUNO, 70
+	startbattle
+	disappear Articuno
+	reloadmapafterbattle
+	end
+
+ArticunoText:
+	text "Gyaoo!"
+	done
 
 Seafoam5F_MapEvents:
 	db 0, 0 ; filler
@@ -41,3 +60,4 @@ Seafoam5F_MapEvents:
 	def_object_events
 	object_event 4, 14, SPRITE_BOULDER, SPRITEMOVEDATA_STILL, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, Seafoam5FBoulder, EVENT_BOULDER_SEAFOAM5F_BOULDER1
 	object_event 5, 14, SPRITE_BOULDER, SPRITEMOVEDATA_STILL, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, Seafoam5FBoulder, EVENT_BOULDER_SEAFOAM5F_BOULDER2
+	object_event 7, 1, SPRITE_BIRD, SPRITEMOVEDATA_STILL, 0, 0, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_SCRIPT, 0, ArticunoScript, EVENT_FOUGHT_ARTICUNO

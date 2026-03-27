@@ -285,29 +285,29 @@ JohtoGrassWildMons:
 	def_grass_wildmons BURNED_TOWER_1F
 	db 4 percent, 4 percent, 4 percent ; encounter rates: morn/day/nite
 	; morn
-	db 20, CYNDAQUIL
+	db 20, KOFFING
 	db 21, SLUGMA
 	db 21, MAGMAR
 	db 20, MAGMAR
 	db 20, SLUGMA
 	db 20, SLUGMA
-	db 20, CHARMANDER
+	db 20, KOFFING
 	; day
-	db 20, CYNDAQUIL
+	db 20, KOFFING
 	db 21, SLUGMA
 	db 21, MAGMAR
 	db 20, MAGMAR
 	db 20, SLUGMA
 	db 20, SLUGMA
-	db 20, CHARMANDER
+	db 20, KOFFING
 	; nite
-	db 20, CYNDAQUIL
+	db 20, KOFFING
 	db 21, SLUGMA
 	db 21, MAGMAR
 	db 20, MAGMAR
 	db 20, SLUGMA
 	db 20, SLUGMA
-	db 20, CHARMANDER
+	db 20, KOFFING
 	end_grass_wildmons
 
 	def_grass_wildmons BURNED_TOWER_B1F
@@ -341,24 +341,24 @@ JohtoGrassWildMons:
 	def_grass_wildmons NATIONAL_PARK
 	db 10 percent, 10 percent, 10 percent ; encounter rates: morn/day/nite
 	; morn
-	db 17, BULBASAUR
-	db 17, CHIKORITA
+	db 17, HOPPIP
+	db 17, HOPPIP
 	db 17, LEDYBA
 	db 18, SUNKERN
 	db 18, PIKACHU
 	db 18, BUTTERFREE
 	db 18, BEEDRILL
 	; day
-	db 17, BULBASAUR
-	db 17, CHIKORITA
+	db 17, HOPPIP
+	db 17, HOPPIP
 	db 17, LEDYBA
 	db 18, SUNKERN
 	db 18, PIKACHU
 	db 18, BUTTERFREE
 	db 18, BEEDRILL
 	; nite
-	db 17, BULBASAUR
-	db 17, CHIKORITA
+	db 17, HOPPIP
+	db 17, HOPPIP
 	db 17, HOUNDOUR
 	db 18, MURKROW
 	db 18, PIKACHU

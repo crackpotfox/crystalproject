@@ -1069,5 +1069,10 @@ PowerPlantBasement_Blocks:
 	INCBIN "maps/PowerPlantBasement.blk"
 MoltresChamber_Blocks:
 	INCBIN "maps/MoltresChamber.blk"
-
+CeruleanCave1F_Blocks:
+	INCBIN "maps/CeruleanCave1F.blk"
+CeruleanCave2F_Blocks:
+	INCBIN "maps/CeruleanCave2F.blk"
+CeruleanCave3F_Blocks:
+	INCBIN "maps/CeruleanCave3F.blk"
 ENDSECTION

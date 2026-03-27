@@ -702,3 +702,6 @@ ENDM
 	map_attributes Seafoam5F, SEAFOAM_5F, $19, 0
 	map_attributes PowerPlantBasement, POWER_PLANT_BASEMENT, $00, 0 
 	map_attributes MoltresChamber, MOLTRES_CHAMBER, $19, 0
+	map_attributes CeruleanCave1F, CERULEAN_CAVE_1F, $19, 0
+	map_attributes CeruleanCave2F, CERULEAN_CAVE_2F, $19, 0
+	map_attributes CeruleanCave3F, CERULEAN_CAVE_3F, $19, 0
