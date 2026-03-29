@@ -335,3 +335,12 @@ INCBIN "data/tilesets/omanyte_word_room_metatiles.bin"
 
 TilesetAerodactylWordRoomMeta::
 INCBIN "data/tilesets/aerodactyl_word_room_metatiles.bin"
+
+TilesetSeafoamGFX::
+INCBIN "gfx/tilesets/seafoam.2bpp.lz"
+
+TilesetSeafoamMeta::
+INCBIN "data/tilesets/seafoam_metatiles.bin"
+
+TilesetSeafoamColl::
+INCLUDE "data/tilesets/seafoam_collision.asm"

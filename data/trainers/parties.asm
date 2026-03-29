@@ -3732,3 +3732,26 @@ MysticalmanGroup:
 	db 23, HAUNTER,    LICK, HYPNOSIS, MEAN_LOOK, CURSE
 	db 25, ELECTRODE,  SCREECH, SONICBOOM, THUNDER, ROLLOUT
 	db -1 ; end
+
+ArchitectGroup:
+	; Will (1)
+	db "WILL@", TRAINERTYPE_NORMAL
+	db 1, SNEASEL
+	db -1 ; end
+
+MalyGroup:
+	; Maly (1)
+	db "MALACHI@", TRAINERTYPE_NORMAL
+	db 100, NOCTOWL
+	db 100, AMPHAROS
+	db 100, SUNFLORA
+	db 100, ALAKAZAM
+	db 100, UMBREON
+	db 100, KINGDRA
+	db -1 ; end
+
+KevinGroup:
+	; Kevinn (1)
+	db "KEVIN@", TRAINERTYPE_NORMAL
+	db 1, MEOWTH
+	db -1 ; end

@@ -170,4 +170,32 @@ KantoWaterWildMons:
 	db 56, TENTACRUEL
 	end_water_wildmons
 
+	def_water_wildmons SEAFOAM_4F
+	db 6 percent
+	db 56, SEEL
+	db 56, DEWGONG
+	db 56, CLOYSTER
+	end_water_wildmons
+
+	def_water_wildmons SEAFOAM_5F
+	db 6 percent
+	db 56, SEEL
+	db 56, DEWGONG
+	db 56, CLOYSTER
+	end_water_wildmons
+
+	def_water_wildmons CERULEAN_CAVE_1F
+	db 6 percent
+	db 95, GOLDUCK
+	db 95, QUAGSIRE
+	db 95, POLITOED
+	end_water_wildmons
+
+	def_water_wildmons CERULEAN_CAVE_3F
+	db 6 percent
+	db 95, GOLDUCK
+	db 95, QUAGSIRE
+	db 95, POLITOED
+	end_water_wildmons
+
 	db -1 ; end

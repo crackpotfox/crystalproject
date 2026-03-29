@@ -3115,8 +3115,11 @@ wFastShipB1FSceneID::                             db
 wMountMoonSquareSceneID::                         db
 wMobileTradeRoomSceneID::                         db
 wMobileBattleRoomSceneID::                        db
+wPlayersHome2FID::                           db
+wSeafoam4ID:: db
+wSeafoam5ID:: db
 
-	ds 49
+	ds 46
 
 ; fight counts
 wJackFightCount::    db

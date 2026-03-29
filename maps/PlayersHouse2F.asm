@@ -6,13 +6,33 @@
 
 PlayersHouse2F_MapScripts:
 	def_scene_scripts
+;	scene_script PH2NoopScene, SCENE_TEST
 
 	def_callbacks
 	callback MAPCALLBACK_NEWMAP, PlayersHouse2FInitializeRoomCallback
 	callback MAPCALLBACK_TILES, PlayersHouse2FSetUpTileDecorationsCallback
 
-PlayersHouse2FNoopScene: ; unreferenced
-	end
+;PlayersHouse2FNoopScene: ; unreferenced
+;	end
+;PH2NoopScene:
+;	end
+
+;Scene_Test:
+;	applymovement PLAYER, TestMove
+;	end
+
+;TestMove:
+;	turn_head RIGHT
+;	turn_head LEFT
+;	step RIGHT
+;	step RIGHT
+;	step RIGHT
+;	step UP
+;	step UP
+;	step UP
+;	step UP
+;	step UP
+;	step_end
 
 PlayersHouse2FInitializeRoomCallback:
 	special ToggleDecorationsVisibility
@@ -50,6 +70,7 @@ PlayersHousePosterScript:
 	describedecoration DECODESC_POSTER
 
 PlayersHouseRadioScript:
+
 	checkevent EVENT_GOT_A_POKEMON_FROM_ELM
 	iftrue .NormalRadio
 	checkevent EVENT_LISTENED_TO_INITIAL_RADIO
@@ -78,6 +99,7 @@ PlayersHouseRadioScript:
 	pause 45
 	closetext
 	end
+
 
 PlayersHouseBookshelfScript:
 	jumpstd PictureBookshelfScript
@@ -119,6 +141,7 @@ PlayersHouse2F_MapEvents:
 	warp_event  7,  0, PLAYERS_HOUSE_1F, 3
 
 	def_coord_events
+;	coord_event 4, 5, SCENE_TEST, Scene_Test 	
 
 	def_bg_events
 	bg_event  2,  1, BGEVENT_UP, PlayersHousePCScript

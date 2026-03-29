@@ -84,4 +84,7 @@ MapScenes::
 	scene_var MOUNT_MOON_SQUARE,                           wMountMoonSquareSceneID
 	scene_var MOBILE_TRADE_ROOM,                           wMobileTradeRoomSceneID
 	scene_var MOBILE_BATTLE_ROOM,                          wMobileBattleRoomSceneID
+	scene_var PLAYERS_HOUSE_2F, wPlayersHome2FID
+	scene_var SEAFOAM_4F, wSeafoam4ID
+	scene_var SEAFOAM_5F, wSeafoam5ID
 	db -1 ; end

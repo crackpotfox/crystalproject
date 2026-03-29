@@ -150,6 +150,7 @@ UnusedTilesetAnim4: ; unreferenced
 
 TilesetCaveAnim:
 TilesetDarkCaveAnim:
+TilesetSeafoamAnim:
 	tileframe ReadTileToAnimBuffer,    vTiles2 tile $14
 	tileframe FlickeringCaveEntrancePalette
 	tileframe ScrollTileRightLeft,     wTileAnimBuffer

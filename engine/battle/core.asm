@@ -2588,6 +2588,18 @@ IsKantoGymLeader:
 	ld hl, KantoGymLeaders
 	jr IsGymLeaderCommon
 
+IsArchitect:
+	ld hl, Architect
+	jr IsGymLeaderCommon
+
+IsMaly:
+	ld hl, Maly
+	jr IsGymLeaderCommon
+
+IsKevin:
+	ld hl, Kevinn
+	jr IsGymLeaderCommon
+
 IsGymLeader:
 	ld hl, GymLeaders
 IsGymLeaderCommon:

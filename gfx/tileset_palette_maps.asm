@@ -59,6 +59,7 @@ INCLUDE "gfx/tilesets/tower_palette_map.asm"
 
 TilesetCavePalMap:
 TilesetDarkCavePalMap:
+TilesetSeafoamPalMap:
 INCLUDE "gfx/tilesets/cave_palette_map.asm"
 
 TilesetParkPalMap:

@@ -26,6 +26,9 @@ MaleTrainers:
 	db SAGE
 	db BIKER
 	db SCIENTIST
+	db ARCHITECT
+	db MALY
+	db KEVIN
 .End
 
 FemaleTrainers:

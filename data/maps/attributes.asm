@@ -696,12 +696,12 @@ ENDM
 	map_attributes MrPokemonsHouse, MR_POKEMONS_HOUSE, $00, 0
 	map_attributes Route31VioletGate, ROUTE_31_VIOLET_GATE, $00, 0
 	map_attributes Seafoam1F, SEAFOAM_1F, $09, 0
-	map_attributes Seafoam2F, SEAFOAM_2F, $19, 0
-	map_attributes Seafoam3F, SEAFOAM_3F, $19, 0
-	map_attributes Seafoam4F, SEAFOAM_4F, $19, 0
-	map_attributes Seafoam5F, SEAFOAM_5F, $19, 0
+	map_attributes Seafoam2F, SEAFOAM_2F, $09, 0
+	map_attributes Seafoam3F, SEAFOAM_3F, $09, 0
+	map_attributes Seafoam4F, SEAFOAM_4F, $09, 0
+	map_attributes Seafoam5F, SEAFOAM_5F, $09, 0
 	map_attributes PowerPlantBasement, POWER_PLANT_BASEMENT, $00, 0 
-	map_attributes MoltresChamber, MOLTRES_CHAMBER, $19, 0
-	map_attributes CeruleanCave1F, CERULEAN_CAVE_1F, $19, 0
-	map_attributes CeruleanCave2F, CERULEAN_CAVE_2F, $19, 0
-	map_attributes CeruleanCave3F, CERULEAN_CAVE_3F, $19, 0
+	map_attributes MoltresChamber, MOLTRES_CHAMBER, $09, 0
+	map_attributes CeruleanCave1F, CERULEAN_CAVE_1F, $09, 0
+	map_attributes CeruleanCave2F, CERULEAN_CAVE_2F, $09, 0
+	map_attributes CeruleanCave3F, CERULEAN_CAVE_3F, $09, 0

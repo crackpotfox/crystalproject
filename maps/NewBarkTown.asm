@@ -116,12 +116,44 @@ NewBarkTownFisherScript:
 ;	loadvar VAR_BATTLETYPE, BATTLETYPE_FORCEITEM
 ;	loadwildmon ARTICUNO, 1
 ;	startbattle
-;	disappear NEWBARKTOWN_ARTICUNO
-;	reloadmapafterbattle
-;	end
+;	disappear NEWBARKTOWN_ARTICUNOINCBIN "gfx/trainers/officer.gbcpal", middle_colors
+;	reloadmapafterbattle          INCBIN "gfx/trainers/grunt_f.gbcpal", middle_colors
+;	end                           INCBIN "gfx/trainers/mysticalman.gbcpal", middle_colors
 ;
 ;ArticunoText:
 ;	text "Gyaoo!"
+;	done
+
+;NewBarkTownWill:
+;	faceplayer
+;	opentext
+;	writetext WILLINTROTEXT
+;	waitbutton
+;	closetext
+;	winlosstext WillWinLossText, 0
+;	loadtrainer KEVINN, KEVINNN;MALY, MALACHI
+;	startbattle
+;	iftrue .ReturnAfterBattle
+;
+;.ReturnAfterBattle:
+;	reloadmapafterbattle
+;	opentext
+;	writetext WillGratz
+;	waitbutton
+;	closetext
+;	end
+
+;WILLINTROTEXT:
+;	text "test"
+;	line "test2"
+;	done
+;
+;WillWinLossText:
+;	text "You beat me"
+;	done
+
+;WillGratz:
+;	text "GZ"
 ;	done
 
 NewBarkTownRivalScript:
@@ -322,4 +354,4 @@ NewBarkTown_MapEvents:
 	object_event  6,  8, SPRITE_TEACHER, SPRITEMOVEDATA_SPINRANDOM_SLOW, 1, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, NewBarkTownTeacherScript, -1
 	object_event 12,  9, SPRITE_FISHER, SPRITEMOVEDATA_WALK_UP_DOWN, 0, 1, -1, -1, PAL_NPC_GREEN, OBJECTTYPE_SCRIPT, 0, NewBarkTownFisherScript, -1
 	object_event  3,  2, SPRITE_RIVAL, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, NewBarkTownRivalScript, EVENT_RIVAL_NEW_BARK_TOWN
-;	object_event 16, 6, SPRITE_BIRD, SPRITEMOVEDATA_STILL, 0, 0, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_SCRIPT, 0, NewBarkTownArticunoScript, EVENT_FOUGHT_ARTICUNO
+;	object_event 16, 6, SPRITE_RIVAL, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_SCRIPT, 0, NewBarkTownWill, -1

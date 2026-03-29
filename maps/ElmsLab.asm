@@ -5,6 +5,9 @@
 	const ELMSLAB_POKE_BALL2
 	const ELMSLAB_POKE_BALL3
 	const ELMSLAB_OFFICER
+	const ELMSLAB_WILL
+	const ELMSLAB_MALY
+	const ELMSLAB_KEVIN
 
 ElmsLab_MapScripts:
 	def_scene_scripts
@@ -723,6 +726,154 @@ AfterChikoritaMovement:
 	turn_head UP
 	step_end
 
+ElmsLabWillScript:
+	faceplayer
+	opentext
+	writetext WILLINTROTEXT
+	waitbutton
+	closetext
+	winlosstext Willwinlosstext, 0
+	loadtrainer ARCHITECT, WILL2
+	startbattle
+	iftrue .ReturnAfterBattle
+
+.ReturnAfterBattle:
+	reloadmapafterbattle
+	opentext
+	writetext WillGratz
+	waitbutton
+	closetext
+	end
+
+ElmsLabMalyScript:
+	faceplayer
+	opentext
+	writetext MALYINTROTEXT
+	waitbutton
+	closetext
+	winlosstext Malywinlosstext, 0
+	loadtrainer MALY, MALACHI
+	startbattle
+	iftrue .ReturnAfterBattle
+
+.ReturnAfterBattle:
+	reloadmapafterbattle
+	opentext
+	writetext MalyGratz
+	waitbutton
+	closetext
+	end
+
+ElmsLabKevinScript:
+	faceplayer
+	opentext
+	writetext KEVININTROTEXT
+	waitbutton
+	closetext
+	winlosstext Kevinwinlosstext, 0
+	loadtrainer KEVINN, KEVINNN
+	startbattle
+	iftrue .ReturnAfterBattle
+
+.ReturnAfterBattle:
+	reloadmapafterbattle
+	opentext
+	writetext KevinGratz
+	waitbutton
+	closetext
+	end
+
+WILLINTROTEXT:
+	text "Hello, I am"
+	line "Will. No, not"
+	cont "that will..."
+
+	para "I helped ELM"
+	line "restore JOHTO"
+	cont "to natural order."
+
+	para "A battle?"
+
+	para "If you want to."
+	line "I won't go easy."
+
+	done
+Willwinlosstext:
+	text "Wow, you're"
+	line "quite good"
+	done
+WillGratz:
+	text "I don't have a"
+	line "BADGE or"
+	cont "anything to"
+	cont "give you."
+	
+	para "You can come"
+	line "back anytime to"
+	cont "battle again."
+	done
+
+MALYINTROTEXT:
+	text "Hello, I am"
+	line "Malachi. I"
+	cont "helped ELM"
+	cont "restore JOHTO to"
+	cont "naturnal order."
+
+	para "A battle?"
+
+	para "Sure!"
+
+	done
+
+Malywinlosstext:
+	text "Wow!"
+	
+	para "You must have"
+	line "brought some"
+	cont "BURN HEAL!"
+	done
+
+MalyGratz:
+	text "I don't have a"
+	line "BADGE or"
+	cont "anything to"
+	cont "give you."
+	
+	para "You can come"
+	line "back anytime to"
+	cont "battle again."
+	done
+
+KEVININTROTEXT:
+	text "Hello, I am"
+	line "Malachi. I"
+	cont "helped ELM"
+	cont "restore JOHTO to"
+	cont "naturnal order."
+
+	para "A battle?"
+
+	para "Ok, let's"
+	line "duke it out."
+	done
+
+Kevinwinlosstext:
+	text "That's so"
+	line "bullshit!"	
+	done
+
+KevinGratz:
+	text "I don't have a"
+	line "BADGE or"
+	cont "anything to"
+	cont "give you."
+	
+	para "You can come"
+	line "back anytime to"
+	cont "battle again."
+	done
+
 ElmText_Intro:
 	text "ELM: <PLAY_G>!"
 	line "There you are!"
@@ -1410,3 +1561,8 @@ ElmsLab_MapEvents:
 	object_event  7,  3, SPRITE_POKE_BALL, SPRITEMOVEDATA_STILL, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, TotodilePokeBallScript, EVENT_TOTODILE_POKEBALL_IN_ELMS_LAB
 	object_event  8,  3, SPRITE_POKE_BALL, SPRITEMOVEDATA_STILL, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, ChikoritaPokeBallScript, EVENT_CHIKORITA_POKEBALL_IN_ELMS_LAB
 	object_event  5,  3, SPRITE_OFFICER, SPRITEMOVEDATA_STANDING_UP, 0, 0, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_SCRIPT, 0, CopScript, EVENT_COP_IN_ELMS_LAB
+	object_event 0, 3, SPRITE_RED, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, PAL_NPC_RED, OBJECTTYPE_SCRIPT, 0, ElmsLabWillScript, EVENT_BEAT_CHAMPION_LANCE
+
+	object_event 0, 4, SPRITE_RED, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_SCRIPT, 0, ElmsLabMalyScript, EVENT_BEAT_CHAMPION_LANCE
+	
+	object_event 0, 5, SPRITE_RED, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, PAL_NPC_GREEN, OBJECTTYPE_SCRIPT, 0, ElmsLabKevinScript, EVENT_BEAT_CHAMPION_LANCE

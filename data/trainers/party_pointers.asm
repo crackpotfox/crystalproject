@@ -70,4 +70,7 @@ TrainerGroups:
 	dw OfficerGroup
 	dw GruntFGroup
 	dw MysticalmanGroup
+	dw ArchitectGroup
+	dw MalyGroup
+	dw KevinGroup
 	assert_table_length NUM_TRAINER_CLASSES

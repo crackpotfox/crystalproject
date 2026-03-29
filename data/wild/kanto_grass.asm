@@ -1009,4 +1009,117 @@ KantoGrassWildMons:
 	db 55, ELECTRODE
 	db 55, MAGNEMITE
 	end_grass_wildmons
+
+	def_grass_wildmons MOLTRES_CHAMBER
+	db 6 percent, 6 percent, 6 percent ; encounter rates: morn/day/nite
+	; morn
+	db 90, GRAVELER
+	db 92, RHYHORN
+	db 90, ONIX
+	db 91, GOLBAT
+	db 90, SANDSLASH
+	db 91, URSARING
+	db 91, DONPHAN
+	; day
+	db 90, GRAVELER
+	db 92, RHYHORN
+	db 90, ONIX
+	db 91, GOLBAT
+	db 90, SANDSLASH
+	db 91, URSARING
+	db 91, DONPHAN
+	; nite
+	db 90, GRAVELER
+	db 92, RHYHORN
+	db 90, ONIX
+	db 91, GOLBAT
+	db 90, SANDSLASH
+	db 91, URSARING
+	db 91, DONPHAN
+	end_grass_wildmons
+
+	def_grass_wildmons CERULEAN_CAVE_1F
+	db 6 percent, 6 percent, 6 percent ; encounter rates: morn/day/nite
+	; morn
+	db 90, PARASECT
+	db 92, MAGNETON
+	db 90, STEELIX
+	db 91, CROBAT
+	db 90, PRIMEAPE
+	db 91, URSARING
+	db 91, WOBBUFFET
+	; day
+	db 90, PARASECT
+	db 92, MAGNETON
+	db 90, STEELIX
+	db 91, CROBAT
+	db 90, PRIMEAPE
+	db 91, URSARING
+	db 91, WOBBUFFET
+	; nite
+	db 90, PARASECT
+	db 92, MAGNETON
+	db 90, STEELIX
+	db 91, CROBAT
+	db 90, PRIMEAPE
+	db 91, URSARING
+	db 91, WOBBUFFET
+	end_grass_wildmons
+
+	def_grass_wildmons CERULEAN_CAVE_2F
+	db 6 percent, 6 percent, 6 percent ; encounter rates: morn/day/nite
+	; morn
+	db 90, PARASECT
+	db 92, MAGNETON
+	db 90, STEELIX
+	db 91, CROBAT
+	db 90, PRIMEAPE
+	db 91, URSARING
+	db 91, WOBBUFFET
+	; day
+	db 90, PARASECT
+	db 92, MAGNETON
+	db 90, STEELIX
+	db 91, CROBAT
+	db 90, PRIMEAPE
+	db 91, URSARING
+	db 91, WOBBUFFET
+	; nite
+	db 90, PARASECT
+	db 92, MAGNETON
+	db 90, STEELIX
+	db 91, CROBAT
+	db 90, PRIMEAPE
+	db 91, URSARING
+	db 91, WOBBUFFET
+	end_grass_wildmons
+
+	def_grass_wildmons CERULEAN_CAVE_3F
+	db 6 percent, 6 percent, 6 percent ; encounter rates: morn/day/nite
+	; morn
+	db 90, PARASECT
+	db 92, MAGNETON
+	db 90, STEELIX
+	db 91, CROBAT
+	db 90, PRIMEAPE
+	db 91, URSARING
+	db 91, WOBBUFFET
+	; day
+	db 90, PARASECT
+	db 92, MAGNETON
+	db 90, STEELIX
+	db 91, CROBAT
+	db 90, PRIMEAPE
+	db 91, URSARING
+	db 91, WOBBUFFET
+	; nite
+	db 90, PARASECT
+	db 92, MAGNETON
+	db 90, STEELIX
+	db 91, CROBAT
+	db 90, PRIMEAPE
+	db 91, URSARING
+	db 91, WOBBUFFET
+	end_grass_wildmons
+
 	db -1 ; end
