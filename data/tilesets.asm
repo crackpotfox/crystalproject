@@ -51,4 +51,5 @@ Tilesets::
 	tileset TilesetOmanyteWordRoom
 	tileset TilesetAerodactylWordRoom
 	tileset TilesetSeafoam
+	tileset TilesetVForest
 	assert_table_length NUM_TILESETS + 1

@@ -1122,4 +1122,32 @@ KantoGrassWildMons:
 	db 91, WOBBUFFET
 	end_grass_wildmons
 
+	def_grass_wildmons VIRIDIAN_FOREST
+	db 6 percent, 6 percent, 6 percent ; encounter rates: morn/day/nite
+	; morn
+	db 90, BUTTERFREE
+	db 92, BEEDRILL
+	db 90, LEDIAN
+	db 91, PARASECT
+	db 90, FORRETRESS
+	db 91, PINSIR
+	db 91, YANMA
+	; day
+	db 90, BUTTERFREE
+	db 92, BEEDRILL
+	db 90, LEDIAN
+	db 91, PARASECT
+	db 90, FORRETRESS
+	db 91, PINSIR
+	db 91, YANMA
+	; nite
+	db 90, ARIADOS
+	db 92, VENOMOTH
+	db 90, LEDIAN
+	db 91, PARASECT
+	db 90, FORRETRESS
+	db 91, PINSIR
+	db 91, YANMA
+	end_grass_wildmons
+
 	db -1 ; end

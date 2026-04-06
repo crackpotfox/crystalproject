@@ -344,3 +344,12 @@ INCBIN "data/tilesets/seafoam_metatiles.bin"
 
 TilesetSeafoamColl::
 INCLUDE "data/tilesets/seafoam_collision.asm"
+
+TilesetVForestGFX::
+INCBIN "gfx/tilesets/vforest.2bpp.lz"
+
+TilesetVForestMeta::
+INCBIN "data/tilesets/vforest_metatiles.bin"
+
+TilesetVForestColl::
+INCLUDE "data/tilesets/vforest_collision.asm"

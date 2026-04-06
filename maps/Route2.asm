@@ -176,6 +176,9 @@ Route2_MapEvents:
 	warp_event 16, 27, ROUTE_2_GATE, 1
 	warp_event 17, 27, ROUTE_2_GATE, 2
 	warp_event 12,  7, DIGLETTS_CAVE, 3
+	warp_event 33, 3, VIRIDIAN_FOREST, 1
+	warp_event 1, 9, VIRIDIAN_FOREST, 2
+;	warp_event 3, 9, VIRIDIAN_FOREST, 2
 
 	def_coord_events
 

@@ -1547,19 +1547,19 @@ JohtoGrassWildMons:
 	; morn
 	db 26, PINSIR
 	db 24, SPEAROW
-	db 27, HERACROSS
+	db 27, FEAROW
 	db 26, SCYTHER
 	db 27, ARBOK
 	db 26, FEAROW
-	db 27, FEAROW
+	db 27, HERACROSS
 	; day
 	db 26, PINSIR
 	db 24, SPEAROW
-	db 27, HERACROSS
+	db 27, FEAROW
 	db 26, SCYTHER
 	db 27, ARBOK
 	db 26, FEAROW
-	db 27, FEAROW
+	db 27, HERACROSS
 	; nite
 	db 26, NIDORINO
 	db 24, NIDORINA

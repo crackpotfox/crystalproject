@@ -494,4 +494,5 @@ INCLUDE "maps/MoltresChamber.asm"
 INCLUDE "maps/CeruleanCave1F.asm"
 INCLUDE "maps/CeruleanCave2F.asm"
 INCLUDE "maps/CeruleanCave3F.asm"
+INCLUDE "maps/ViridianForest.asm"
 ENDSECTION

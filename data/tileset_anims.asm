@@ -35,6 +35,7 @@ TilesetParkAnim:
 	tileframe StandingTileFrame8
 	tileframe DoneTileAnimation
 
+TilesetVForestAnim:
 TilesetForestAnim:
 	tileframe ForestTreeLeftAnimation
 	tileframe ForestTreeRightAnimation

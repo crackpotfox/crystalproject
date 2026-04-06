@@ -163,6 +163,7 @@ ENDM
 	map_const CERULEAN_CAVE_1F,                            16, 10 ; 98
 	map_const CERULEAN_CAVE_2F,                            16, 10 ; 99
 	map_const CERULEAN_CAVE_3F,                            16, 10 ;100
+	map_const VIRIDIAN_FOREST,                             17, 24 ;101
 
 	endgroup
 
