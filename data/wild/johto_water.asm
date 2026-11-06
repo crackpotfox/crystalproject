@@ -130,7 +130,7 @@ JohtoWaterWildMons:
 
 	def_water_wildmons ROUTE_30
 	db 2 percent ; encounter rate
-	db 15, TOTODILE
+	db 15, MARILL
 	db 24, AZUMARILL
 	db 25, POLIWHIRL
 	end_water_wildmons
@@ -256,7 +256,7 @@ JohtoWaterWildMons:
 
 	def_water_wildmons BLACKTHORN_CITY
 	db 4 percent ; encounter rate
-	db 16, TOTODILE
+	db 16, HORSEA
 	db 33, SEADRA
 	db 33, SEAKING
 	end_water_wildmons

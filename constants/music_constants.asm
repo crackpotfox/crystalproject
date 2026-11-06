@@ -105,7 +105,10 @@
 	const MUSIC_SUICUNE_BATTLE               ; 64
 	const MUSIC_BATTLE_TOWER_LOBBY           ; 65
 	const MUSIC_MOBILE_CENTER                ; 66
-DEF NUM_MUSIC_SONGS EQU const_value
+  const MUSIC_WILL
+  const MUSIC_MALY
+  const MUSIC_KEVIN
+  DEF NUM_MUSIC_SONGS EQU const_value
 
 ; GetMapMusic picks music for this value (see home/map.asm)
 ; this overlaps with a Crystal song ID, but not one that is used for map music

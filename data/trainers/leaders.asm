@@ -29,4 +29,15 @@ KantoGymLeaders:
 	db SABRINA
 	db BLAINE
 	db BLUE
-	db -1
+;	db -1
+
+Kevinn:
+  db KEVINN
+
+Maly:
+  db MALY
+
+Architect:
+  db ARCHITECT
+
+  db -1

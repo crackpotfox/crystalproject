@@ -3752,8 +3752,11 @@ BattleCommand_Poison:
 	jr c, .failed
 
 .dont_sample_failure
+	ld hl, ProtectingItselfText
 	call CheckSubstituteOpp
 	jr nz, .failed
+
+	ld hl, EvadedText
 	ld a, [wAttackMissed]
 	and a
 	jr nz, .failed
@@ -5606,8 +5609,8 @@ BattleCommand_Charge:
 	text_end
 
 BattleCommand_Dummy_SkipToTrapTarget:
-; Dummied out from pokegold-spaceworld.
-	ret
+	; Dummied out from pokegold-spaceworld.
+  ret
 
 BattleCommand_TrapTarget:
 	ld a, [wAttackMissed]
@@ -6221,8 +6224,10 @@ PrintDidntAffect:
 
 PrintDidntAffect2:
 	call AnimateFailedMove
-	ld hl, DidntAffect1Text ; 'it didn't affect'
-	ld de, DidntAffect2Text ; 'it didn't affect'
+;	ld hl, DidntAffect1Text ; 'it didn't affect'
+;	ld de, DidntAffect2Text ; 'it didn't affect'
+	ld hl, EvadedText ; 'evaded the attack'
+	ld de, ProtectingItselfText ; 'protecting itself'
 	jp FailText_CheckOpponentProtect
 
 PrintParalyze:
@@ -6354,7 +6359,7 @@ INCLUDE "engine/battle/move_effects/sandstorm.asm"
 INCLUDE "engine/battle/move_effects/rollout.asm"
 
 BattleCommand_Dummy_Swagger:
-; Dummied out from pokegold-spaceworld.
+; Dummied out from pokegold-spaceworld
 	ret
 
 INCLUDE "engine/battle/move_effects/fury_cutter.asm"

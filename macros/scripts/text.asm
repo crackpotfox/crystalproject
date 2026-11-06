@@ -18,13 +18,25 @@ MACRO para
 	db "<PARA>", \# ; Start a new paragraph
 ENDM
 
+;MACRO autopara
+;	db "<ATPRA>", \# ; AutoStart a new paragraph
+;ENDM
+
 MACRO cont
 	db "<CONT>", \# ; Scroll to the next line
+ENDM
+
+MACRO scroll
+	db "<SCROLL>", \# ; Scroll to the next line, short pause
 ENDM
 
 MACRO done
 	db "<DONE>" ; End a text box
 ENDM
+
+;MACRO autodone
+;	db "<ATDNE>" ; End a text box
+;ENDM
 
 MACRO prompt
 	db "<PROMPT>" ; Prompt the player to end a text box (initiating some other event)

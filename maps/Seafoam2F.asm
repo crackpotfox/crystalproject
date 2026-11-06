@@ -16,20 +16,20 @@ Seafoam2FSetUpStoneTableCallback:
 	cmdqueue CMDQUEUE_STONETABLE, .StoneTable ; check if stone on warp
 
 .StoneTable:
-	stonetable 3, SEAFOAM2F_BOULDER1, .Boulder1
-	stonetable 4, SEAFOAM2F_BOULDER2, .Boulder2
+	stonetable 8, SEAFOAM2F_BOULDER1, .Boulder1
+	stonetable 9, SEAFOAM2F_BOULDER2, .Boulder2
 	db -1
 
 .Boulder1:
 	disappear SEAFOAM2F_BOULDER1
-	clearevent EVENT_BOULDER_SEAFOAM2F_BOULDER1
-	setevent EVENT_BOULDER_SEAFOAM3F_BOULDER1
+	setevent EVENT_BOULDER_SEAFOAM2F_BOULDER1
+	clearevent EVENT_BOULDER_SEAFOAM3F_BOULDER1
 	sjump .FinishBoulder
 
 .Boulder2:
 	disappear SEAFOAM2F_BOULDER2
-	clearevent EVENT_BOULDER_SEAFOAM2F_BOULDER2
-	setevent EVENT_BOULDER_SEAFOAM3F_BOULDER2
+	setevent EVENT_BOULDER_SEAFOAM2F_BOULDER2
+	clearevent EVENT_BOULDER_SEAFOAM3F_BOULDER2
 	sjump .FinishBoulder
 
 .FinishBoulder

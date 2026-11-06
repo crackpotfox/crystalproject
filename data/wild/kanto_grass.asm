@@ -982,4 +982,177 @@ KantoGrassWildMons:
 	db 55, SEADRA
 	end_grass_wildmons
 
+
+	def_grass_wildmons POWER_PLANT_BASEMENT
+	db 10 percent, 10 percent, 10 percent
+	;morn
+	db 55, MAGNETON
+	db 55, RAICHU
+	db 55, AMPHAROS
+	db 55, ELECTABUZZ
+	db 55, VOLTORB
+	db 55, ELECTRODE
+	db 55, MAGNEMITE
+	;day
+	db 55, MAGNETON
+	db 55, RAICHU
+	db 55, AMPHAROS
+	db 55, ELECTABUZZ
+	db 55, VOLTORB
+	db 55, ELECTRODE
+	db 55, MAGNEMITE
+	;nite
+	db 55, MAGNETON
+	db 55, RAICHU
+	db 55, AMPHAROS
+	db 55, ELECTABUZZ
+	db 55, VOLTORB
+	db 55, ELECTRODE
+	db 55, MAGNEMITE
+	end_grass_wildmons
+
+	def_grass_wildmons MOLTRES_CHAMBER
+	db 6 percent, 6 percent, 6 percent ; encounter rates: morn/day/nite
+	; morn
+	db 90, GRAVELER
+	db 92, RHYHORN
+	db 90, ONIX
+	db 91, GOLBAT
+	db 90, SANDSLASH
+	db 91, URSARING
+	db 91, DONPHAN
+	; day
+	db 90, GRAVELER
+	db 92, RHYHORN
+	db 90, ONIX
+	db 91, GOLBAT
+	db 90, SANDSLASH
+	db 91, URSARING
+	db 91, DONPHAN
+	; nite
+	db 90, GRAVELER
+	db 92, RHYHORN
+	db 90, ONIX
+	db 91, GOLBAT
+	db 90, SANDSLASH
+	db 91, URSARING
+	db 91, DONPHAN
+	end_grass_wildmons
+
+	def_grass_wildmons CERULEAN_CAVE_1F
+	db 6 percent, 6 percent, 6 percent ; encounter rates: morn/day/nite
+	; morn
+	db 90, PARASECT
+	db 92, MAGNETON
+	db 90, STEELIX
+	db 91, CROBAT
+	db 90, PRIMEAPE
+	db 91, URSARING
+	db 91, WOBBUFFET
+	; day
+	db 90, PARASECT
+	db 92, MAGNETON
+	db 90, STEELIX
+	db 91, CROBAT
+	db 90, PRIMEAPE
+	db 91, URSARING
+	db 91, WOBBUFFET
+	; nite
+	db 90, PARASECT
+	db 92, MAGNETON
+	db 90, STEELIX
+	db 91, CROBAT
+	db 90, PRIMEAPE
+	db 91, URSARING
+	db 91, WOBBUFFET
+	end_grass_wildmons
+
+	def_grass_wildmons CERULEAN_CAVE_2F
+	db 6 percent, 6 percent, 6 percent ; encounter rates: morn/day/nite
+	; morn
+	db 90, PARASECT
+	db 92, MAGNETON
+	db 90, STEELIX
+	db 91, CROBAT
+	db 90, PRIMEAPE
+	db 91, URSARING
+	db 91, WOBBUFFET
+	; day
+	db 90, PARASECT
+	db 92, MAGNETON
+	db 90, STEELIX
+	db 91, CROBAT
+	db 90, PRIMEAPE
+	db 91, URSARING
+	db 91, WOBBUFFET
+	; nite
+	db 90, PARASECT
+	db 92, MAGNETON
+	db 90, STEELIX
+	db 91, CROBAT
+	db 90, PRIMEAPE
+	db 91, URSARING
+	db 91, WOBBUFFET
+	end_grass_wildmons
+
+	def_grass_wildmons CERULEAN_CAVE_3F
+	db 6 percent, 6 percent, 6 percent ; encounter rates: morn/day/nite
+	; morn
+	db 90, PARASECT
+	db 92, MAGNETON
+	db 90, STEELIX
+	db 91, CROBAT
+	db 90, PRIMEAPE
+	db 91, URSARING
+	db 91, WOBBUFFET
+	; day
+	db 90, PARASECT
+	db 92, MAGNETON
+	db 90, STEELIX
+	db 91, CROBAT
+	db 90, PRIMEAPE
+	db 91, URSARING
+	db 91, WOBBUFFET
+	; nite
+	db 90, PARASECT
+	db 92, MAGNETON
+	db 90, STEELIX
+	db 91, CROBAT
+	db 90, PRIMEAPE
+	db 91, URSARING
+	db 91, WOBBUFFET
+	end_grass_wildmons
+
+	def_grass_wildmons VIRIDIAN_FOREST
+	db 6 percent, 6 percent, 6 percent ; encounter rates: morn/day/nite
+	; morn
+	db 90, BUTTERFREE
+	db 92, BEEDRILL
+	db 90, LEDIAN
+	db 91, PARASECT
+	db 90, FORRETRESS
+	db 91, PINSIR
+	db 91, YANMA
+	; day
+	db 90, BUTTERFREE
+	db 92, BEEDRILL
+	db 90, LEDIAN
+	db 91, PARASECT
+	db 90, FORRETRESS
+	db 91, PINSIR
+	db 91, YANMA
+	; nite
+	db 90, ARIADOS
+	db 92, VENOMOTH
+	db 90, LEDIAN
+	db 91, PARASECT
+	db 90, FORRETRESS
+	db 91, PINSIR
+	db 91, YANMA
+  end_grass_wildmons
+
+
+
+
+
 	db -1 ; end

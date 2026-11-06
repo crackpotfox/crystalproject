@@ -489,5 +489,11 @@ INCLUDE "maps/Seafoam2F.asm"
 INCLUDE "maps/Seafoam3F.asm"
 INCLUDE "maps/Seafoam4F.asm"
 INCLUDE "maps/Seafoam5F.asm"
+INCLUDE "maps/PowerPlantBasement.asm"
+INCLUDE "maps/MoltresChamber.asm"
+INCLUDE "maps/CeruleanCave1F.asm"
+INCLUDE "maps/CeruleanCave2F.asm"
+INCLUDE "maps/CeruleanCave3F.asm"
+INCLUDE "maps/ViridianForest.asm"
 
 ENDSECTION

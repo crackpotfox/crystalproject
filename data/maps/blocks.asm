@@ -1065,4 +1065,17 @@ Seafoam4F_Blocks:
 Seafoam5F_Blocks:
 	INCBIN "maps/Seafoam5F.blk"
 
+
+PowerPlantBasement_Blocks:
+	INCBIN "maps/PowerPlantBasement.blk"
+MoltresChamber_Blocks:
+	INCBIN "maps/MoltresChamber.blk"
+CeruleanCave1F_Blocks:
+	INCBIN "maps/CeruleanCave1F.blk"
+CeruleanCave2F_Blocks:
+	INCBIN "maps/CeruleanCave2F.blk"
+CeruleanCave3F_Blocks:
+	INCBIN "maps/CeruleanCave3F.blk"
+ViridianForest_Blocks:
+	INCBIN "maps/ViridianForest.blk"
 ENDSECTION

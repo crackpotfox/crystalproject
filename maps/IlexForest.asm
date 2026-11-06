@@ -82,6 +82,7 @@ IlexForestFarfetchdCallback:
 .PositionTen:
 	moveobject ILEXFOREST_FARFETCHD, 6, 28
 	appear ILEXFOREST_FARFETCHD
+	endcallback
 
 IlexForestCharcoalApprenticeScript:
 	faceplayer

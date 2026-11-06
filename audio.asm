@@ -149,6 +149,10 @@ SECTION "Extra Songs 2", ROMX
 
 INCLUDE "audio/music/postcredits.asm"
 
+SECTION "New Songs", ROMX
+INCLUDE "audio/music/will.asm"
+INCLUDE "audio/music/maly.asm"
+INCLUDE "audio/music/kevin.asm"
 
 SECTION "Sound Effects", ROMX
 

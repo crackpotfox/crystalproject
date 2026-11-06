@@ -78,9 +78,9 @@ PlayBattleMusic:
 	ld de, MUSIC_JOHTO_WILD_BATTLE
 	ld a, [wTimeOfDay]
 	cp NITE_F
-	jr nz, .done
+	jp nz, .done
 	ld de, MUSIC_JOHTO_WILD_BATTLE_NIGHT
-	jr .done
+	jp .done
 
 .kantowild
 	ld de, MUSIC_KANTO_WILD_BATTLE
@@ -100,6 +100,18 @@ PlayBattleMusic:
 	cp GRUNTF
 	jr z, .done
 
+	ld de, MUSIC_WILL
+	farcall IsArchitect
+	jr c, .done
+
+	ld de, MUSIC_MALY
+	farcall IsMaly
+	jr c, .done
+
+	ld de, MUSIC_KEVIN
+	farcall IsKevin
+	jr c, .done
+
 	ld de, MUSIC_KANTO_GYM_LEADER_BATTLE
 	farcall IsKantoGymLeader
 	jr c, .done
@@ -109,6 +121,10 @@ PlayBattleMusic:
 	ld de, MUSIC_JOHTO_GYM_LEADER_BATTLE
 	farcall IsGymLeader
 	jr c, .done
+
+;	ld de, MUSIC_REDCHAMP
+;	farcall IsArchitect
+;	jr c, .done
 
 	ld de, MUSIC_RIVAL_BATTLE
 	ld a, [wOtherTrainerClass]
@@ -193,7 +209,7 @@ ClearBattleRAM:
 	call ClearWindowData
 
 	ld hl, hBGMapAddress
-	xor a ; LOW(vTilemap0)
+	xor a ; LOW(vTileMap0)
 	ld [hli], a
 	ld [hl], HIGH(vTilemap0)
 	ret

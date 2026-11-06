@@ -2592,6 +2592,18 @@ IsKantoGymLeader:
 	ld hl, KantoGymLeaders
 	jr IsGymLeaderCommon
 
+IsArchitect:
+  ld hl, Architect
+  jr IsGymLeaderCommon
+
+IsMaly:
+  ld hl, Maly
+  jr IsGymLeaderCommon 
+
+IsKevin:
+  ld hl, Kevinn
+  jr IsGymLeaderCommon
+
 IsGymLeader:
 	ld hl, GymLeaders
 IsGymLeaderCommon:
@@ -4644,8 +4656,9 @@ CheckDanger:
 
 .no_danger
 	ld hl, wLowHealthAlarm
+	;res DANGER_ON_F, [hl]
 	ld [hl], 0
-	jr .done
+  jr .done
 
 .danger
 	ld hl, wLowHealthAlarm
@@ -6113,8 +6126,18 @@ LoadEnemyMon:
 	jp .UpdateDVs
 
 .NotRoaming:
+;; Register a contains wBattleType
+;
+;; Forced shiny battle type
+;; Used by Red Gyarados at Lake of Rage
+;	cp BATTLETYPE_FORCESHINY
+;	jr nz, .GenerateDVs
+;
+;	ld b, ATKDEFDV_SHINY ; $ea
+;	ld c, SPDSPCDV_SHINY ; $aa
+;	jr .UpdateDVs
 
-    cp BATTLETYPE_FORCESHINY
+cp BATTLETYPE_FORCESHINY
     jr nz, .TryShinyRolls
 	
     jp .AlwaysShiny        ; Forced Shiny Encounter
@@ -6244,6 +6267,8 @@ LoadEnemyMon:
 
 .NotShiny:
 	; normal handling
+
+
 
 .GenerateDVs:
 ; Generate new random DVs

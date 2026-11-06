@@ -59,6 +59,7 @@ INCLUDE "gfx/tilesets/tower_palette_map.asm"
 
 TilesetCavePalMap:
 TilesetDarkCavePalMap:
+TilesetSeafoamPalMap:
 INCLUDE "gfx/tilesets/cave_palette_map.asm"
 
 TilesetParkPalMap:
@@ -107,6 +108,11 @@ INCLUDE "gfx/tilesets/battle_tower_inside_palette_map.asm"
 
 TilesetBattleTowerOutsidePalMap:
 INCLUDE "gfx/tilesets/battle_tower_outside_palette_map.asm"
+
+TilesetVForestPalMap:
+INCLUDE "gfx/tilesets/vforest_palette_map.asm"
+
+
 
 MapGroupPalettes: ; unreferenced
 ; entries correspond to MAPGROUP_* constants
